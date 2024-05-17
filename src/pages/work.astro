@@ -1,4 +1,5 @@
 ---
+import Logo from "../assets/images/Logo.astro";
 import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
@@ -17,11 +18,7 @@ import BaseLayout from "../layout/BaseLayout.astro";
   >
     <div class="flex justify-between w-full items-center">
       <a href="/"
-        ><img
-          src="/public/logo.svg"
-          alt="Big Baboons Studio logo"
-          class="max-w-16 hover:rotate-12 duration-300"
-        /></a
+        ><Logo/></a
       >
       <Link classes="cta" url="contact">Let's have a chat!</Link>
     </div>
