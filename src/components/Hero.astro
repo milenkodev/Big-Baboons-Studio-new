@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"section"> {
+  classes?: string;
+}
+
+const { classes } = Astro.props;
+---
+
+<section class="p-2 h-[70svh] ">
+  <div
+    class="min-h-full  rounded-[24px] px-[clamp(1rem,_0.4rem_+_3vw,_4rem)] py-[clamp(1rem,_0.8rem_+_1vw,_2rem)]"
+    class:list={classes}
+  >
+    <slot />
+  </div>
+</section>

@@ -1,0 +1,62 @@
+---
+import "@fontsource/prompt/900.css";
+import "@fontsource/atkinson-hyperlegible/400.css";
+import "@fontsource/atkinson-hyperlegible/700.css";
+import '@fontsource/permanent-marker';
+---
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  html,
+  body,
+  #main {
+    margin: 0;
+    padding: 0;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1.1;
+    line-height: calc(2px + 2ex + 2px);
+  }
+
+
+
+  h1,
+  h2,
+  h3 {
+    @apply font-prompt uppercase;
+  }
+
+  
+  h1 {
+    font-size: clamp(2rem, 0.85rem + 5.75vw, 7.75rem);
+    margin-bottom: -0.24em;
+    @apply text-center;
+  }
+
+  h2 {
+
+    font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
+
+  }
+
+  p{
+    font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+  }
+
+  .work-titles{
+    font-size: clamp(2rem, 0.85rem + 5.75vw, 7.75rem);
+    margin-bottom: -0.24em;
+    @apply text-center text-white uppercase font-prompt  ;
+  }
+  
+</style>

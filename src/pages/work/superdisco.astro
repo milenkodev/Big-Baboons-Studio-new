@@ -1,0 +1,83 @@
+---
+import Hero from "../../components/Hero.astro";
+import Link from "../../components/Link.astro";
+import Section from "../../components/Section.astro";
+import BaseLayout from "../../layout/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <Hero classes="bg-white h-[20%] flex flex-col">
+    <div class="flex justify-between w-full items-center">
+      <a href="/"
+        ><img
+          src="/public/logo.svg"
+          alt="Big Baboons Studio logo"
+          class="max-w-16 hover:rotate-12 duration-300"
+        /></a
+      >
+      <Link classes="cta" url="contact">Let's have a chat!</Link>
+    </div>
+    <div class="grow flex flex-col items-center justify-center h-auto gap-12">
+      <h1 class="">Superdisco</h1>
+      <p class="max-w-screen-lg text-center">
+        "A dynamic landing page for one of Rotterdam's premier nightclubs. This
+        custom-built website features an integrated CMS, empowering the client
+        to effortlessly update image galleries and announce upcoming events. The
+        site is optimized for peak performance, SEO-friendly, and designed to
+        provide a smooth, engaging user experience."
+      </p>
+    </div>
+  </Hero>
+
+  <Section classes="bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="h-full w-full object-cover rounded-3xl"
+      >
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/v1715767388/New-file_2_iu6jxa.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/v1715767388/New-file_2_iu6jxa.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </Section>
+
+  <Section classes="bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="h-full w-full object-cover rounded-3xl"
+      >
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/v1715764606/New-file_bd0fbc.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/v1715764606/New-file_bd0fbc.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </Section>
+
+  <Section classes="bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <img
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1715768796/Desktop_-_6_ufdtvh.webp"
+        alt=""
+        class="h-full w-full object-cover rounded-3xl"
+      />
+    </div>
+  </Section>
+</BaseLayout>
