@@ -1,4 +1,6 @@
 ---
+import Link from "./Link.astro";
+
 
 ---
 
@@ -27,10 +29,11 @@
 
   <!-- menu -->
   <ul class="flex gap-8 flex-col justify-center items-center w-full bg-black text-white fixed bottom-0 left-0 h-0 group-hover:h-full overflow-clip duration-300 rounded-xl ">
-    <li>Home</li>
-    <li>About</li>
-    <li>Work</li>
-    <li>Contact</li>
+    <li> <Link url="/" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase hover:underline">Home</Link></li>
+    <li> <Link url="/about" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline">about</Link></li>
+    <li> <Link url="/work" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline">work</Link></li>
+    <li> <Link url="/contact" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt uppercase  hover:underline">contact</Link></li>
+
   </ul>
 
 
