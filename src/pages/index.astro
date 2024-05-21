@@ -59,27 +59,16 @@ import BaseLayout from "../layout/BaseLayout.astro";
         >More about us</Link>
     </div>
   </Section>
-  <Section
-    classes="indexCards text-white overflow-clip   flex flex-col justify-center items-center relative bg-[url('/src/assets/images/gbcfront.png')] bg-cover bg-center before:bg-black/90 before:w-full before:h-full before:absolute before:inset-0"
-  >
-    <div class="grow flex flex-col items-center justify-center relative">
-      <a href="" class="work-titles">Gentlemens barber club</a>
+
+  <Section classes="bg-white relative  flex overflow-clip group">
+    <div class="grow flex flex-col items-center justify-center absolute inset-0 group-hover:bg-white/80 duration-300  z-50">
+      <a href="work/gentlemens-barber-club" class="work-titles bg-clip-text  text-transparent bg-accent ">Gentlemens barber club</a>
+    </div>
+    <div class="absolute inset-0 rounded-3xl block group-hover:scale-110 duration-700 ">
+      <img src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716309216/Free_Iphone_15_Mockup_2_d1ic5c.webp" class="origin-center " alt="">
     </div>
   </Section>
-  <Section
-    classes="indexCards text-white overflow-clip   flex flex-col justify-center items-center relative bg-[url('/src/assets/images/gbcfront.png')] bg-cover bg-center before:bg-black/90 before:w-full before:h-full before:absolute before:inset-0"
-  >
-    <div class="grow flex flex-col items-center justify-center relative">
-      <a href="" class="work-titles">Gentlemens barber club</a>
-    </div>
-  </Section>
-  <Section
-    classes="text-white overflow-clip   flex flex-col justify-center items-center relative bg-[url('/src/assets/images/gbcfront.png')] bg-cover bg-center before:bg-black/90 before:w-full before:h-full before:absolute before:inset-0"
-  >
-    <div class="grow flex flex-col items-center justify-center relative">
-      <a href="" class="work-titles">Gentlemens barber club</a>
-    </div>
-  </Section>
+
 </BaseLayout>
 
 <script>
@@ -92,7 +81,7 @@ import BaseLayout from "../layout/BaseLayout.astro";
   const explainTitle = document.querySelector(".explain-title");
   const explainText = document.querySelector(".explain-text");
   const explainSection = document.querySelector(".explainSection");
-  const explainBtn = document.querySelector(".explainBtn");
+  // const explainBtn = document.querySelector(".explainBtn");
 
   const explainTl = gsap.timeline({
     scrollTrigger: {
@@ -113,26 +102,19 @@ import BaseLayout from "../layout/BaseLayout.astro";
         duration: 1,
         ease: "power1",
       },
-      0
+    
     )
     .from(
       explainText,
       {
         yPercent: 100,
         transformOrigin: "center",
-    
         duration: 1,
         ease: "power1",
       },
-      0
+     
     )
-    .from(explainBtn, {
-      yPercent: 100,
-      transformOrigin: "center",
 
-      duration: 1,
-      ease: "power1",
-    }, 0);
 
   const toThePointSection = document.querySelector(".to-the-point");
   const toThePointText = document.querySelectorAll(".to-the-point-text-1");
