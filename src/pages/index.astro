@@ -7,21 +7,19 @@ import BaseLayout from "../layout/BaseLayout.astro";
 
 <BaseLayout>
   <Section
-    classes=" bg-white flex flex-col justify-center items-center "
+    classes=" bg-white flex flex-col justify-center items-center heroSection"
   >
     <div class="flex justify-between w-full items-center">
-      <a href="/"
-        ><Logo/></a
-      >
+      <a href="/"><Logo /></a>
       <Link classes="cta" url="contact">Let's have a chat!</Link>
     </div>
     <div class="grow flex flex-col items-center justify-center">
-      <h1>We build</h1>
-      <h1>dope websites</h1>
-      <ul class="flex gap-3 mt-6 text-lg">
-        <li>We tell your story</li>
-        <li>We tell your story</li>
-        <li>We tell your story</li>
+      <div class="overflow-clip"><h1 class="hero-text">We build</h1></div>
+      <div class="overflow-clip"><h1 class="hero-text">dope websites</h1></div>
+      <ul class="mt-6 text-2xl flex gap-6">
+        <li class="">Marketing</li>
+        <li class="">E-commerce</li>
+        <li class="">SEO experts</li>
       </ul>
       <img
         src="/public/pointing-down.svg"
@@ -30,15 +28,22 @@ import BaseLayout from "../layout/BaseLayout.astro";
       />
     </div>
   </Section>
-  <Section classes=" text-white flex flex-col justify-center items-center">
-    <h1>Straight to</h1>
-    <h1>the point</h1>
-  </Section>
   <Section
-    classes=" bg-white  flex flex-col justify-center items-center  gap-6 "
+    classes=" text-white flex flex-col justify-center items-center bg-to-the-point  to-the-point overflow-clip bg-black "
   >
-    <h2 class="max-w-screen-md">we design & develop your website.</h2>
-    <p class="max-w-screen-md">
+    <h1 class="to-the-point-text-1">Straight to</h1>
+    <h1 class="to-the-point-text-2">the point</h1>
+  </Section>
+
+  <!-- wrapper -->
+
+  <Section
+    classes="  indexCards w-full bg-white  flex flex-col justify-center items-center place-items-start gap-6 explainSection "
+  >
+  <div class="overflow-clip max-w-screen-lg">
+    <h2 class=" explain-title">we design & develop your website.</h2></div>
+    <div class="overflow-clip max-w-screen-lg">
+    <p class=" explain-text overflow-clip">
       We'll elevate your website into a digital masterpiece, connecting you with
       a wider audience and turning not just your locals. Our website are always
       SEO-friendly to ensures you're always seen and chosen by your target
@@ -46,6 +51,121 @@ import BaseLayout from "../layout/BaseLayout.astro";
       breaking down barriers for business growth. And when it comes to online
       sales, our e-commerce solutions are second to none, driving up revenue and
       customer satisfaction.
-    </p>
+    </p></div>
+    <div class="max-w-screen-lg w-full text-center overflow-clip"> <Link classes="cta  self-start w-fit explainBtn" url="about">More about us</Link></div>
+   
   </Section>
+  <Section
+    classes="indexCards text-white overflow-clip   flex flex-col justify-center items-center relative bg-[url('/src/assets/images/gbcfront.png')] bg-cover bg-center before:bg-black/90 before:w-full before:h-full before:absolute before:inset-0"
+  >
+    <div class="grow flex flex-col items-center justify-center relative">
+      <a href="" class="work-titles">Gentlemens barber club</a>
+    </div>
+  </Section>
+  <Section
+    classes="indexCards text-white overflow-clip   flex flex-col justify-center items-center relative bg-[url('/src/assets/images/gbcfront.png')] bg-cover bg-center before:bg-black/90 before:w-full before:h-full before:absolute before:inset-0"
+  >
+    <div class="grow flex flex-col items-center justify-center relative">
+      <a href="" class="work-titles">Gentlemens barber club</a>
+    </div>
+  </Section>
+  <Section
+    classes="text-white overflow-clip   flex flex-col justify-center items-center relative bg-[url('/src/assets/images/gbcfront.png')] bg-cover bg-center before:bg-black/90 before:w-full before:h-full before:absolute before:inset-0"
+  >
+    <div class="grow flex flex-col items-center justify-center relative">
+      <a href="" class="work-titles">Gentlemens barber club</a>
+    </div>
+  </Section>
+ 
 </BaseLayout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  const heroText = document.querySelectorAll(".hero-text");
+  gsap.from(heroText, {
+    yPercent: 100,
+    transformOrigin: "center",
+    stagger: 0.2,
+    duration: 1,
+    ease: "power1",
+  });
+
+const explainTitle = document.querySelector(".explain-title");
+const explainText = document.querySelector(".explain-text");
+const explainSection = document.querySelector(".explainSection");
+const explainBtn = document.querySelector(".explainBtn");
+
+const explainTl = gsap.timeline({
+  scrollTrigger: {
+      trigger: explainSection,
+      start: "top center",
+      end: "bottom bottom",
+      scrub: true,
+      markers: true,
+    },
+});
+
+
+
+explainTl.from(explainTitle, {
+  yPercent: 100,
+    transformOrigin: "center",
+    stagger: 0.2,
+    duration: 1,
+    ease: "power1",
+}, 0).from(explainText, {
+  yPercent: 100,
+    transformOrigin: "center",
+    stagger: 0.2,
+    duration: 1,
+    ease: "power1",
+}, 0.5).from(explainBtn, {
+  yPercent: 100,
+    transformOrigin: "center",
+    stagger: 0.2,
+    duration: 1,
+    ease: "power1",
+}, );
+
+
+  const toThePointSection = document.querySelector(".to-the-point");
+  const toThePointText = document.querySelectorAll(".to-the-point-text-1");
+  const toThePointText2 = document.querySelectorAll(".to-the-point-text-2");
+
+  const tlttp = gsap.timeline({
+    scrollTrigger: {
+      trigger: toThePointSection,
+      start: "top center+=400",
+      end: "bottom bottom",
+      scrub: 2,
+      // markers: true,
+    },
+  });
+
+  tlttp
+    .from(
+      toThePointText,
+      {
+        xPercent: 200,
+
+        ease: "power4",
+      },
+      0
+    )
+    .from(
+      toThePointText2,
+      {
+        xPercent: -200,
+
+        ease: "power4",
+      },
+      0
+    );
+
+
+
+
+</script>

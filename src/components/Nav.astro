@@ -4,21 +4,21 @@ import Link from "./Link.astro";
 
 ---
 
-<nav role="navigation" class="fixed bottom-0 left-0 flex justify-center w-full rounded-lg pointer-events-none z-10 group ">
-  <button aria-expanded="true" class="bg-black  rounded-lg w-14 max-w-16 max-h-16  border-4 border-black group z-50 pointer-events-auto">
+<nav role="navigation" class="fixed bottom-0 left-0 flex justify-center w-full rounded-lg pointer-events-none z-50 group ">
+  <button aria-expanded="true" class="bg-black  rounded-lg w-14 max-w-16 max-h-16  border-4 border-black group z-50 pointer-events-auto group peer">
     <input
       type="checkbox"
       role="button"
-      class="hidden"
+      class=" hidden peer"
       id="menu"
       aria-describedby="menu"
       aria-expanded="false"
-      name="hamburger"
+      name="menu"
       aria-label="Toggle navigation"
     />
 
     <label for="menu" id="menuid" class="">
-      <div class="  flex flex-col justify-center items-center gap-1 p-3 bg-accent rounded-[4px] mb-2 group-hover:mb-4 duration-200">
+      <div class=" flex flex-col justify-center items-center gap-1 p-3 bg-accent rounded-[4px] mb-2 group-hover:mb-4 duration-200 ">
         <span id="top" class="lines w-2/4 group-hover:w-full group-hover:translate-y-2 group-hover:-rotate-[40deg]"></span>
         <span id="middle" class="lines w-3/4 group-hover:w-0 "></span>
         <span id="bottom" class="lines w-full  group-hover:-translate-y-2 group-hover:rotate-[40deg] "></span>
@@ -28,8 +28,8 @@ import Link from "./Link.astro";
   </button>
 
   <!-- menu -->
-  <ul class="flex gap-8 flex-col justify-center items-center w-full bg-black text-white fixed bottom-0 left-0 h-0 group-hover:h-full overflow-clip duration-300 rounded-xl ">
-    <li> <Link url="/" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase hover:underline">Home</Link></li>
+<ul class="flex gap-8 flex-col justify-center items-center w-full  text-white fixed bottom-0 left-0 h-0 peer-has-[:checked]:h-full overflow-clip duration-700 rounded-xl pointer-events-auto bg-accent  ">
+    <li class=" "> <Link url="/" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase hover:underline  ">Home</Link></li>
     <li> <Link url="/about" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline">about</Link></li>
     <li> <Link url="/work" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline">work</Link></li>
     <li> <Link url="/contact" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt uppercase  hover:underline">contact</Link></li>
@@ -49,12 +49,4 @@ import Link from "./Link.astro";
   }
 </style>
 
-<!-- 
-<button class="inline-flex items-center justify-center bg-red-500">
- <span>
 
-
- </span>
-
-
-</button> -->
