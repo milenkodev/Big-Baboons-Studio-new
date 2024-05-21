@@ -44,6 +44,17 @@ import "../style/Style.astro";
     });
   });
 
+
+  const heroText = document.querySelectorAll(".hero-text");
+  gsap.from(heroText, {
+    yPercent: 100,
+    transformOrigin: "center",
+    stagger: 0.2,
+    duration: 1,
+    ease: "power1",
+  });
+
+
   const indexCards = document.querySelectorAll(".indexCards");
   const indexWrapper = document.querySelector(".indexWrapper");
 

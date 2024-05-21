@@ -40,20 +40,24 @@ import BaseLayout from "../layout/BaseLayout.astro";
   <Section
     classes="  indexCards w-full bg-white  flex flex-col justify-center items-center place-items-start gap-6 explainSection "
   >
-  <div class="overflow-clip max-w-screen-lg">
-    <h2 class=" explain-title">we design & develop your website.</h2></div>
     <div class="overflow-clip max-w-screen-lg">
-    <p class=" explain-text overflow-clip">
-      We'll elevate your website into a digital masterpiece, connecting you with
-      a wider audience and turning not just your locals. Our website are always
-      SEO-friendly to ensures you're always seen and chosen by your target
-      audience. No limits here—we'll help you reach customers wherever they are,
-      breaking down barriers for business growth. And when it comes to online
-      sales, our e-commerce solutions are second to none, driving up revenue and
-      customer satisfaction.
-    </p></div>
-    <div class="max-w-screen-lg w-full text-center overflow-clip"> <Link classes="cta  self-start w-fit explainBtn" url="about">More about us</Link></div>
-   
+      <h2 class="explain-title">we design & develop your website.</h2>
+    </div>
+    <div class="overflow-clip max-w-screen-lg">
+      <p class="explain-text overflow-clip">
+        We'll elevate your website into a digital masterpiece, connecting you
+        with a wider audience and turning not just your locals. Our website are
+        always SEO-friendly to ensures you're always seen and chosen by your
+        target audience. No limits here—we'll help you reach customers wherever
+        they are, breaking down barriers for business growth. And when it comes
+        to online sales, our e-commerce solutions are second to none, driving up
+        revenue and customer satisfaction.
+      </p>
+    </div>
+    <div class="max-w-screen-lg w-full text-center  pb-1 overflow-clip">
+      <Link classes="cta  self-start w-fit explainBtn" url="about"
+        >More about us</Link>
+    </div>
   </Section>
   <Section
     classes="indexCards text-white overflow-clip   flex flex-col justify-center items-center relative bg-[url('/src/assets/images/gbcfront.png')] bg-cover bg-center before:bg-black/90 before:w-full before:h-full before:absolute before:inset-0"
@@ -76,7 +80,6 @@ import BaseLayout from "../layout/BaseLayout.astro";
       <a href="" class="work-titles">Gentlemens barber club</a>
     </div>
   </Section>
- 
 </BaseLayout>
 
 <script>
@@ -84,52 +87,52 @@ import BaseLayout from "../layout/BaseLayout.astro";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
-  const heroText = document.querySelectorAll(".hero-text");
-  gsap.from(heroText, {
-    yPercent: 100,
-    transformOrigin: "center",
-    stagger: 0.2,
-    duration: 1,
-    ease: "power1",
-  });
 
-const explainTitle = document.querySelector(".explain-title");
-const explainText = document.querySelector(".explain-text");
-const explainSection = document.querySelector(".explainSection");
-const explainBtn = document.querySelector(".explainBtn");
 
-const explainTl = gsap.timeline({
-  scrollTrigger: {
+  const explainTitle = document.querySelector(".explain-title");
+  const explainText = document.querySelector(".explain-text");
+  const explainSection = document.querySelector(".explainSection");
+  const explainBtn = document.querySelector(".explainBtn");
+
+  const explainTl = gsap.timeline({
+    scrollTrigger: {
       trigger: explainSection,
       start: "top center",
       end: "bottom bottom",
       scrub: true,
       markers: true,
     },
-});
+  });
 
+  explainTl
+    .from(
+      explainTitle,
+      {
+        yPercent: 100,
+        transformOrigin: "center",
+        duration: 1,
+        ease: "power1",
+      },
+      0
+    )
+    .from(
+      explainText,
+      {
+        yPercent: 100,
+        transformOrigin: "center",
+    
+        duration: 1,
+        ease: "power1",
+      },
+      0
+    )
+    .from(explainBtn, {
+      yPercent: 100,
+      transformOrigin: "center",
 
-
-explainTl.from(explainTitle, {
-  yPercent: 100,
-    transformOrigin: "center",
-    stagger: 0.2,
-    duration: 1,
-    ease: "power1",
-}, 0).from(explainText, {
-  yPercent: 100,
-    transformOrigin: "center",
-    stagger: 0.2,
-    duration: 1,
-    ease: "power1",
-}, 0.5).from(explainBtn, {
-  yPercent: 100,
-    transformOrigin: "center",
-    stagger: 0.2,
-    duration: 1,
-    ease: "power1",
-}, );
-
+      duration: 1,
+      ease: "power1",
+    }, 0);
 
   const toThePointSection = document.querySelector(".to-the-point");
   const toThePointText = document.querySelectorAll(".to-the-point-text-1");
@@ -164,8 +167,4 @@ explainTl.from(explainTitle, {
       },
       0
     );
-
-
-
-
 </script>
