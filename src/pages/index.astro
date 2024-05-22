@@ -7,7 +7,7 @@ import BaseLayout from "../layout/BaseLayout.astro";
 
 <BaseLayout>
   <Section
-    classes=" bg-white flex flex-col justify-center items-center heroSection"
+    classes=" bg-white flex flex-col justify-center items-center heroSection overflow-clip"
   >
     <div class="flex justify-between w-full items-center">
       <a href="/"><Logo /></a>
@@ -81,12 +81,9 @@ import BaseLayout from "../layout/BaseLayout.astro";
         class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300">Gentlemens barber club</a
       >
     </div>
-    <div
-    class=" rounded-3xl group-hover:scale-125 duration-700 relative "
-    >
       <img
         src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716369736/001_vghdsa.webp"
-        class=" w-full object-fill absolute inset-0 overflow-clip"
+        class="w-full h-full object-cover object-center absolute inset-0"
         alt=""
       />
     </div>
@@ -96,41 +93,37 @@ import BaseLayout from "../layout/BaseLayout.astro";
       class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 "
     >
       <a
-        href="work/gentlemens-barber-club"
-        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300 origin-center">Superdisco</a
+        href="work/superdisco"
+        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300">Superdisco</a
       >
     </div>
-    <div
-    class=" rounded-3xl  group-hover:scale-125 duration-700 relative "
-    >
       <img
-      src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716367757/Macbook_Air_M2_Mockup_1_yucctz.webp"
-        class=" w-full object-fill absolute inset-0 overflow-clip scale-110 "
+      src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716381377/Macbook_Air_M2_Mockup_1_hrtcew.webp"
+        class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"
         alt=""
       />
     </div>
   </Section>
-  
-
-  <!-- <Section classes=" bg-white relative  flex  group overflow-hidden">
+  <Section classes="  bg-white relative  w-full overflow-clip  group">
     <div
-      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 overflow-hidden"
+      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 "
     >
       <a
-        href="work/gentlemens-barber-club"
-        class="work-titles bg-clip-text text-white opacity-0 group-hover:opacity-100 duration-300">Superdisco</a
+        href="work/ishmael-zouitni"
+        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300">Ishmael Zouitni</a
       >
     </div>
-    <div
-      class=" scale-110 rounded-3xl group-hover:scale-125 duration-700 flex overflow-clip "
-    >
       <img
-        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716367757/Macbook_Air_M2_Mockup_1_yucctz.webp"
-        class=""
+      src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716382407/Macbook_Air_M2_Mockup_3_igeaym.webp"
+        class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"
         alt=""
       />
     </div>
-  </Section> -->
+  </Section>
+
+
+  
+
 </BaseLayout>
 
 <script>
@@ -149,7 +142,7 @@ import BaseLayout from "../layout/BaseLayout.astro";
       start: "top center",
       end: "bottom bottom",
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
   });
 

@@ -86,14 +86,14 @@ import "../style/Style.astro";
       });
   });
 
-
+// footer
   const FooterTextUp = document.querySelectorAll(".FooterUp");
 
   
   const tlFooter = gsap.timeline({
     scrollTrigger: {
         trigger: '.lastCard',
-        start: 'bottom top+=200',
+        start: 'bottom center-=200',
         end: 'bottom bottom',
         scrub: 1,
         // markers: true,
@@ -101,8 +101,27 @@ import "../style/Style.astro";
   })
   tlFooter.from('.FooterUp',{
     yPercent: 100,
-    duration:0.5,
+    duration:1,
     ease: "power1",
 
+    },0).from('.alter-text',{
+      autoAlpha: 0,
+      rotateY: 90,
+      
+    },0)
+
+
+
+
+    gsap.from('.footer',{
+      scrollTrigger: {
+        trigger: '.lastCard',
+        start: 'start bottom',
+        // end: 'bottom bottom',
+        scrub: true,
+        // markers: true,
+      },
+      opacity:0,
+      duration: 0.1,
     })
 </script>
