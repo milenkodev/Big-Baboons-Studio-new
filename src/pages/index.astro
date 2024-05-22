@@ -16,11 +16,22 @@ import BaseLayout from "../layout/BaseLayout.astro";
     <div class="grow flex flex-col items-center justify-center">
       <div class="overflow-clip"><h1 class="hero-text">We build</h1></div>
       <div class="overflow-clip"><h1 class="hero-text">dope websites</h1></div>
-      <ul class="mt-6 text-2xl flex gap-6">
-        <li class="">Marketing</li>
-        <li class="">E-commerce</li>
-        <li class="">SEO experts</li>
-      </ul>
+
+      <div class="marquee__wrapper relative mt-4  duration-300 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient-to-r from-white via-white/0 to-white before:z-10 ">
+        <ul class="marquee">
+          <li>Web Development</li>
+          <li>Web Design</li>
+          <li>E-Commerce</li>
+          <li>SEO Optimisation</li>
+        </ul>
+        <ul class="marquee2">
+          <li>Web Development</li>
+          <li>Web Design</li>
+          <li>E-Commerce</li>
+          <li>SEO Optimisation</li>
+        </ul>
+      </div>
+
       <img
         src="/public/pointing-down.svg"
         alt="hand pointing down to scroll"
@@ -54,29 +65,78 @@ import BaseLayout from "../layout/BaseLayout.astro";
         revenue and customer satisfaction.
       </p>
     </div>
-    <div class="max-w-screen-lg w-full text-center  pb-1 overflow-clip">
+    <div class="max-w-screen-lg w-full text-center pb-1 overflow-clip">
       <Link classes="cta  self-start w-fit explainBtn" url="about"
-        >More about us</Link>
+        >More about us</Link
+      >
     </div>
   </Section>
 
-  <Section classes="bg-white relative  flex overflow-clip group">
-    <div class="grow flex flex-col items-center justify-center absolute inset-0 group-hover:bg-white/80 duration-300  z-50">
-      <a href="work/gentlemens-barber-club" class="work-titles bg-clip-text  text-transparent bg-accent ">Gentlemens barber club</a>
+  <Section classes=" indexCards bg-white relative  w-full overflow-clip  group">
+    <div
+      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 "
+    >
+      <a
+        href="work/gentlemens-barber-club"
+        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300">Gentlemens barber club</a
+      >
     </div>
-    <div class="absolute inset-0 rounded-3xl block group-hover:scale-110 duration-700 ">
-      <img src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716309216/Free_Iphone_15_Mockup_2_d1ic5c.webp" class="origin-center " alt="">
+    <div
+    class=" rounded-3xl group-hover:scale-125 duration-700 relative "
+    >
+      <img
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716369736/001_vghdsa.webp"
+        class=" w-full object-fill absolute inset-0 overflow-clip"
+        alt=""
+      />
     </div>
   </Section>
+  <Section classes=" indexCards bg-white relative  w-full overflow-clip  group">
+    <div
+      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 "
+    >
+      <a
+        href="work/gentlemens-barber-club"
+        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300 origin-center">Superdisco</a
+      >
+    </div>
+    <div
+    class=" rounded-3xl  group-hover:scale-125 duration-700 relative "
+    >
+      <img
+      src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716367757/Macbook_Air_M2_Mockup_1_yucctz.webp"
+        class=" w-full object-fill absolute inset-0 overflow-clip scale-110 "
+        alt=""
+      />
+    </div>
+  </Section>
+  
 
+  <!-- <Section classes=" bg-white relative  flex  group overflow-hidden">
+    <div
+      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 overflow-hidden"
+    >
+      <a
+        href="work/gentlemens-barber-club"
+        class="work-titles bg-clip-text text-white opacity-0 group-hover:opacity-100 duration-300">Superdisco</a
+      >
+    </div>
+    <div
+      class=" scale-110 rounded-3xl group-hover:scale-125 duration-700 flex overflow-clip "
+    >
+      <img
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716367757/Macbook_Air_M2_Mockup_1_yucctz.webp"
+        class=""
+        alt=""
+      />
+    </div>
+  </Section> -->
 </BaseLayout>
 
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
-
-
 
   const explainTitle = document.querySelector(".explain-title");
   const explainText = document.querySelector(".explain-text");
@@ -88,33 +148,24 @@ import BaseLayout from "../layout/BaseLayout.astro";
       trigger: explainSection,
       start: "top center",
       end: "bottom bottom",
-      scrub: true,
+      scrub: 1,
       markers: true,
     },
   });
 
   explainTl
-    .from(
-      explainTitle,
-      {
-        yPercent: 100,
-        transformOrigin: "center",
-        duration: 1,
-        ease: "power1",
-      },
-    
-    )
-    .from(
-      explainText,
-      {
-        yPercent: 100,
-        transformOrigin: "center",
-        duration: 1,
-        ease: "power1",
-      },
-     
-    )
-
+    .from(explainTitle, {
+      yPercent: 100,
+      transformOrigin: "center",
+      // duration: 1,
+      ease: "power1",
+    },0)
+    .from(explainText, {
+      yPercent: 100,
+      transformOrigin: "center",
+      // duration: 1.5,
+      ease: "power1",
+    },0.3);
 
   const toThePointSection = document.querySelector(".to-the-point");
   const toThePointText = document.querySelectorAll(".to-the-point-text-1");
