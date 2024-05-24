@@ -1,0 +1,82 @@
+---
+import Logo from "../../assets/images/Logo.astro";
+import Hero from "../../components/Hero.astro";
+import Link from "../../components/Link.astro";
+import Section from "../../components/Section.astro";
+import BaseLayout from "../../layout/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <Hero classes="bg-white h-[20%] flex flex-col">
+    <div class="flex justify-between w-full items-center">
+      <a href="/"><Logo /></a>
+      <Link classes="cta" url="contact">Let's have a chat!</Link>
+    </div>
+    <div class="grow flex flex-col items-center justify-center h-auto gap-12">
+      <h1 class="long-header-1">Gentlemens Barber Club</h1>
+      <p class="max-w-screen-lg text-center">
+        "A landing page website for a small barber shop in the Netherlands.
+        Specializing in classic and modern haircuts, the site makes booking
+        appointments with Rotterdam's top barber a breeze. It's designed for a
+        smooth user experience, is SEO-friendly, and delivers optimal
+        performance!"
+      </p>
+    </div>
+  </Hero>
+  <Section classes="indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="h-full w-full object-cover rounded-3xl"
+      >
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/v1716537513/Unnamed-file_5_ivv9cb.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/v1716537513/Unnamed-file_5_ivv9cb.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </Section>
+
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <img
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716541447/asdsadsasaasd_m81dni.webp"
+        alt=""
+        class="h-full w-full object-cover rounded-3xl"
+      />
+    </div>
+  </Section>
+
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <img
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716539690/aaa_km19fn.webp"
+        alt=""
+        class="h-full w-full object-cover rounded-3xl"
+      />
+    </div>
+  </Section>
+
+  <Section classes="indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <img
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716539933/Macbook_Air_Masdasdasdasdd2_Mockup_3_fnqn4k.webp"
+        alt=""
+        class="h-full w-full object-cover rounded-3xl"
+      />
+    </div>
+  </Section>
+  <Section classes=" bg-white relative flex">
+    <div class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col ">
+      <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-marker ">Check out our other work</p>
+      >Ishmael Zouitni</Link>
+    </div>
+  </Section>
+</BaseLayout>
