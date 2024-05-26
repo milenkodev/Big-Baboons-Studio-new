@@ -4,6 +4,7 @@ import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
 import LLogo from "../assets/images/L_Logo.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <BaseLayout>
@@ -13,7 +14,7 @@ import LLogo from "../assets/images/L_Logo.astro";
       <Link classes="cta" url="contact">Let's have a chat!</Link>
     </div>
     <div class="grow flex flex-col items-center justify-center gap-6">
-      <div class="overflow-clip"><h1 class="hero-text">Our studio</h1></div>
+      <div class="overflow-clip"><h1 class="hero-text">The Studio</h1></div>
       <img
         src="/pointing-down.svg"
         alt="hand pointing down to scroll"
@@ -26,37 +27,43 @@ import LLogo from "../assets/images/L_Logo.astro";
   >
     <!-- <LLogo classes="fill-white max-w-[500px]" /> -->
     <p class="max-w-screen-lg text-center text-4xl">
-      An independent creative studio based in Rotterdam. We take your brands
-      through strategy, creativity and digital innovation.
+      An independent digital studio based in Rotterdam. We make business stand
+      out with our creative solutions.
     </p>
   </Section>
 
   <Section
-    classes="   w-full bg-white  flex flex-col justify-center items-center  gap-6 "
+    classes=" w-full bg-white  flex flex-col justify-center items-center  gap-6 "
   >
-    <div class="overflow-clip max-w-screen-lg">
-      <h2 class="">We’re all about your business goals</h2>
+    <div class="overflow-clip">
+      <h1 class="">what we do?</h1>
     </div>
-    <div class="overflow-clip max-w-screen-lg">
-      <p class="overflow-clip">
-        We're all about making your business goals our top priority. When it
-        comes to solutions, we don't just deliver; we serve up exactly what your
-        business craves. Think of us as your digital matchmaker, connecting you
-        with a broader audience, boosting your website's SEO game, smashing
-        through those geographical barriers, and putting you on the global map.
-      </p>
-    </div>
-  </Section>
-  <Section
-    classes="indexCards text-white flex flex-col justify-center items-center  gap-8 bg-black"
-  >
-    <div class="overflow-clip max-w-screen-lg">
-      <h2 class="">We’re good at</h2>
-    </div>
-  </Section>
 
+    <!-- <ul class="flex flex-col text-[48px] text-center service border-4 relative bg-red-200">
+      <li class="service-item">Web Development</li>
+      <li class="service-item">E-Commerce</li>
+      <li class="service-item">SEO Optimisation</li>
+      <li class="service-item">UX/UI Design</li>
+    </ul> -->
+  </Section>
+  <Hero classes="bg-white  flex flex-col">
+    <div class="flex justify-between w-full items-center">
+      <a href="/"><Logo /></a>
+      <Link classes="cta" url="/contact">Let's have a chat!</Link>
+    </div>
+    <div class="grow flex flex-col items-center justify-center h-auto gap-12">
+      <h1 class="">Ishmael Zouitni</h1>
+      <p class="max-w-screen-lg text-center">
+        "We crafted an interactive website for a freelance photographer focused
+        on the values of the people he collaborates with, showcasing the values
+        and genuine potential of the individuals that are the main focus of his
+        work"
+      </p>
+
+    </div>
+  </Hero>
   <Section
-  classes="  indexCards w-full bg-white  flex flex-col justify-center items-center  gap-6 "
+    classes="h-[20%]   w-full bg-white  flex flex-col justify-center items-center  gap-6 "
   >
     <div class="overflow-clip max-w-screen-lg">
       <h2 class="">Website Design</h2>
@@ -71,7 +78,60 @@ import LLogo from "../assets/images/L_Logo.astro";
     </div>
   </Section>
   <Section
-  classes="indexCards w-full bg-white  flex flex-col justify-center items-center  gap-6  "
+    classes="  w-full bg-white  flex flex-col justify-center items-center  gap-6 "
+  >
+    <div class="overflow-clip max-w-screen-lg">
+      <h2 class="">Website Design</h2>
+    </div>
+    <div class="overflow-clip max-w-screen-lg">
+      <p class="overflow-clip text-center">
+        We combine aesthetics and functionality to create digital experiences
+        that truly connect with your audience. Our user-centered design process
+        not only boosts productivity but also drives revenue and growth,
+        ensuring your company thrives.
+      </p>
+    </div>
+  </Section>
+  <Section
+    classes="min-h-[50svh]  w-full bg-white  flex flex-col justify-center items-center  gap-6 "
+  >
+    <div class="overflow-clip max-w-screen-lg">
+      <h2 class="">Website Design</h2>
+    </div>
+    <div class="overflow-clip max-w-screen-lg">
+      <p class="overflow-clip text-center">
+        We combine aesthetics and functionality to create digital experiences
+        that truly connect with your audience. Our user-centered design process
+        not only boosts productivity but also drives revenue and growth,
+        ensuring your company thrives.
+      </p>
+    </div>
+  </Section>
+  <!-- <Section
+    classes="indexCards text-white flex flex-col justify-center items-center  gap-8 bg-black"
+  >
+    <div class="overflow-clip max-w-screen-lg">
+      <h2 class="">We’re good at</h2>
+    </div>
+  </Section>
+
+  <Section
+    classes="  indexCards w-full bg-white  flex flex-col justify-center items-center  gap-6 "
+  >
+    <div class="overflow-clip max-w-screen-lg">
+      <h2 class="">Website Design</h2>
+    </div>
+    <div class="overflow-clip max-w-screen-lg">
+      <p class="overflow-clip text-center">
+        We combine aesthetics and functionality to create digital experiences
+        that truly connect with your audience. Our user-centered design process
+        not only boosts productivity but also drives revenue and growth,
+        ensuring your company thrives.
+      </p>
+    </div>
+  </Section>
+  <Section
+    classes="indexCards w-full bg-white  flex flex-col justify-center items-center  gap-6  "
   >
     <div class="overflow-clip max-w-screen-lg">
       <h2 class="">Website development</h2>
@@ -82,7 +142,7 @@ import LLogo from "../assets/images/L_Logo.astro";
         code and design to create sites that look great and work even better. A
         solid website boosts user experience, engagement, and business growth.
         Whether it's a blog or an e-commerce powerhouse, we know how to make
-        your digital vision a reality. No fluff, just results.  
+        your digital vision a reality. No fluff, just results.
       </p>
     </div>
   </Section>
@@ -94,9 +154,22 @@ import LLogo from "../assets/images/L_Logo.astro";
     </div>
     <div class="overflow-clip max-w-screen-lg">
       <p class="overflow-clip text-center">
-        SEO optimization is the key to making your website visible and attracting the right traffic. It’s about using the right keywords, creating quality content, and optimizing your site's structure to rank higher on search engines. With effective SEO, you drive organic traffic, increase engagement, and boost your online presence. No gimmicks, just strategic moves to get you noticed and grow your business.
+        SEO optimization is the key to making your website visible and
+        attracting the right traffic. It’s about using the right keywords,
+        creating quality content, and optimizing your site's structure to rank
+        higher on search engines. With effective SEO, you drive organic traffic,
+        increase engagement, and boost your online presence. No gimmicks, just
+        strategic moves to get you noticed and grow your business.
       </p>
     </div>
-  </Section>
-  
+  </Section> -->
 </BaseLayout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+gsap.set('.service-item', {position: 'absolute', top: 0})
+
+</script>

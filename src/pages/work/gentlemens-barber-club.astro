@@ -4,13 +4,14 @@ import Hero from "../../components/Hero.astro";
 import Link from "../../components/Link.astro";
 import Section from "../../components/Section.astro";
 import BaseLayout from "../../layout/BaseLayout.astro";
+import External from "../../assets/images/External.astro";
 ---
 
 <BaseLayout>
   <Hero classes="bg-white h-[20%] flex flex-col">
     <div class="flex justify-between w-full items-center">
       <a href="/"><Logo /></a>
-      <Link classes="cta" url="contact">Let's have a chat!</Link>
+      <Link classes="cta" url="/contact">Let's have a chat!</Link>
     </div>
     <div class="grow flex flex-col items-center justify-center h-auto gap-12">
       <h1 class="long-header-1">Gentlemens Barber Club</h1>
@@ -21,6 +22,11 @@ import BaseLayout from "../../layout/BaseLayout.astro";
         smooth user experience, is SEO-friendly, and delivers optimal
         performance!"
       </p>
+      <Link
+      url="https://gentlemens-barber-club.vercel.app/"
+      classes="flex gap-1 justify-center items-center underline font-atk font-bold"
+      target="_blank">Check it live <External/></Link
+    >
     </div>
   </Hero>
   <Section classes="indexCards bg-white relative  flex">
@@ -75,7 +81,10 @@ import BaseLayout from "../../layout/BaseLayout.astro";
   </Section>
   <Section classes=" bg-white relative flex">
     <div class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col ">
-      <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-marker ">Check out our other work</p>
+      <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
+        Check out next work
+      </p>
+      <Link classes="work-titles  underline" url="/work/ishmael-zouitni"
       >Ishmael Zouitni</Link>
     </div>
   </Section>
