@@ -26,7 +26,9 @@ import Hero from "../components/Hero.astro";
     classes=" text-white flex flex-col justify-center items-center  gap-8 bg-black"
   >
     <!-- <LLogo classes="fill-white max-w-[500px]" /> -->
-    <p class="max-w-screen-lg text-center text-4xl text-justify">
+    <p
+      class="max-w-screen-lg text-[clamp(1.125rem,_0.9rem_+_1.125vw,_2.25rem)] text-justify"
+    >
       An independent digital studio based in Rotterdam, Big Baboons Studio
       blends creativity and technology to make your digital dreams come true. As
       a dynamic web agency, we help businesses build a strong online presence.
@@ -39,73 +41,78 @@ import Hero from "../components/Hero.astro";
   <Section
     classes=" w-full bg-white  flex flex-col justify-center items-center  gap-6 service"
   >
-    <!-- <div class="overflow-clip">
-      <h1 class="">Service</h1>
-    </div> -->
-
-    <div class="grid grid-cols-2 border-4  items-center">
+    <div class="grid grid-cols-2 items-center">
       <ul
-        class="flex flex-col gap-2 text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-prompt uppercase"
+        class="flex flex-col gap-4 text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-prompt uppercase"
       >
-        <li class="service-item">Web Development</li>
         <li class="service-item">Web Design</li>
-        <li class="service-item">E-Commerce</li>
-        <li class="service-item">SEO Optimisation</li>
+        <li class="service-item">Web Development</li>
+        <li class="service-item ">E-Commerce</li>
+        <li class="service-item ">SEO Optimisation</li>
       </ul>
 
-
-
-
-      <ul class="flex flex-col justify-center items-center text-justify relative min-w-full    max-w-screen-sm">
-        <li class="service-text 
-          <p
-            class=" text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)] w-full max-w-screen-sm"
-          >
-            We turn ideas into powerful, interactive websites. It’s about code
-            and design to create sites that look great and work even better.
-            solid website boosts user experience, engagement, and business
-            Whether it's a blog or an e-commerce powerhouse, we know how to make
-            your digital vision a reality.
+      <ul
+        class="flex flex-col justify-center items-center text-justify relative min-w-full w-[640px] max-w-screen-sm  overflow-clip h-full"
+      >
+        <li class="service-text absolute inset-0 flex items-center">
+          <p class="text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)]">
+            We create visually appealing, user-friendly designs that capture
+            your brand’s identity. Our process includes both UI and UX design
+            for seamless, meaningful user experiences that is focused on your
+            target group.
           </p>
         </li>
-        <li class="service-text   ">
-
-          <p
-            class=" text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)] w-full max-w-screen-sm"
-          >
-            We turn ideas into powerful, interactive websites. It’s about code
-            and design to create sites that look great and work even better.
-            solid website boosts user experience, engagement, and business
-            Whether it's a blog or an e-commerce powerhouse, we know how to make
-            your digital vision a reality.
+        <li class="service-text absolute inset-0 flex items-center">
+          <p class="text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)]">
+            We build robust, scalable websites using Webflow or custom code. Our
+            expertise includes integrating headless CMS systems like Sanity and
+            payment solutions such as Stripe and Mollie. Whether you need a
+            simple site or a complex web application, we ensure it’s fast,
+            secure, and easy to manage.
           </p>
         </li>
-        <li class="service-text    ">
-
-          <p
-            class=" text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)] w-full max-w-screen-sm"
-          >
-            We turn ideas into powerful, interactive websites. It’s about code
-            and design to create sites that look great and work even better.
-            solid website boosts user experience, engagement, and business
-            Whether it's a blog or an e-commerce powerhouse, we know how to make
-            your digital vision a reality.
+        <li class="service-text absolute inset-0 flex items-center">
+          <p class="text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)] w-full">
+            We create e-commerce sites that boost your sales and drive growth,
+            delivering real results. No generic solutions here—we tailor our
+            strategies to your specific needs, without sacrificing creativity or
+            performance. Using platforms like Webflow and Shopify, we make
+            everything possible.
           </p>
         </li>
-        <li class="service-text  b  ">
-
-          <p
-            class=" text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)] w-full max-w-screen-sm"
-          >
-            We turn ideas into powerful, interactive websites. It’s about code
-            and design to create sites that look great and work even better.
-            solid website boosts user experience, engagement, and business
-            Whether it's a blog or an e-commerce powerhouse, we know how to make
-            your digital vision a reality.
+        <li class="service-text absolute inset-0 flex items-center  ">
+          <p class="text-[clamp(1rem,_0.975rem_+_0.125vw,_1.125rem)] ">
+            We boost your online visibility with expert SEO strategies. By
+            optimizing your site’s content, structure, and performance, we help
+            you rank higher on search engines and attract organic traffic.
           </p>
         </li>
-        
       </ul>
+      
+    </div>
+    <!-- <Link classes="cta mt-4" url="contact">Let's have a chat!</Link> -->
+  </Section>
+
+  <Section
+    classes="bg-white text-black flex flex-col justify-center items-center  gap-8 bg-black"
+  >
+    <div class="flex flex-col justify-center items-center gap-3">
+      <img
+        class=""
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716791674/milo_fzmpmf.webp"
+        alt=""
+      />
+      <div class="text-center flex flex-col justify-center items-center">
+        <h3 class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)]">
+          Milenko Ilic
+        </h3>
+        <p class="md:text-xl">Founder</p>
+        <Link
+          classes=" mt-4 underline md:text-xl "
+          url="mailto:Milenko@bigbaboons.studio"
+          target="_blank">Milenko@bigbaboons.studio</Link
+        >
+      </div>
     </div>
   </Section>
 </BaseLayout>
@@ -117,13 +124,13 @@ import Hero from "../components/Hero.astro";
 
   const serviceItem = document.querySelectorAll(".service-item");
   const serviceText = document.querySelectorAll(".service-text");
-  
-  gsap.set(serviceItem, { opacity: 0.5 });
-  gsap.set(serviceText, { opacity: 0.5, });
+
+  gsap.set(serviceItem, { autoAlpha: 0.5 });
+  gsap.set(serviceText, { autoAlpha: 0, y: 100 });
 
   // Show the first service item and text initially
-  gsap.to(serviceItem[0], { opacity: 1 });
-  gsap.to(serviceText[0], { opacity: 1,  });
+  gsap.to(serviceItem[0], { autoAlpha: 1 });
+  gsap.to(serviceText[0], { autoAlpha: 1, y: 0 });
 
   serviceItem.forEach((item, index) => {
     gsap.timeline({
@@ -131,8 +138,8 @@ import Hero from "../components/Hero.astro";
         trigger: item,
         start: "top center",
         end: "bottom center",
-        scrub: 1,
-        markers: true,
+        scrub: 2,
+        // markers: true,
         onEnter: () => {
           setOpacity(index);
           showText(index);
@@ -147,20 +154,20 @@ import Hero from "../components/Hero.astro";
 
   function setOpacity(activeIndex) {
     serviceItem.forEach((item, index) => {
-      gsap.to(item, { opacity: index === activeIndex ? 1 : 0.5 });
+      gsap.to(item, { autoAlpha: index === activeIndex ? 1 : 0.5 });
     });
   }
 
   function showText(activeIndex) {
     serviceText.forEach((text, index) => {
       if (index === activeIndex) {
-        gsap.to(text, { opacity: 1,  });
+        gsap.to(text, {
+          autoAlpha: 1,
+          y: 0,
+        });
       } else {
-        gsap.to(text, { opacity: 0.5,  });
+        gsap.to(text, { autoAlpha: 0, y: 200, ease: "power1" });
       }
     });
   }
 </script>
-
-
-
