@@ -152,13 +152,13 @@ import Hero from "../components/Hero.astro";
     });
   });
 
-  function setOpacity(activeIndex) {
+  function setOpacity(activeIndex: any) {
     serviceItem.forEach((item, index) => {
       gsap.to(item, { autoAlpha: index === activeIndex ? 1 : 0.5 });
     });
   }
 
-  function showText(activeIndex) {
+  function showText(activeIndex: any) {
     serviceText.forEach((text, index) => {
       if (index === activeIndex) {
         gsap.to(text, {
