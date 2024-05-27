@@ -5,6 +5,7 @@ import Link from "../../components/Link.astro";
 import Section from "../../components/Section.astro";
 import BaseLayout from "../../layout/BaseLayout.astro";
 import External from "../../assets/images/External.astro";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout>
@@ -32,38 +33,36 @@ import External from "../../assets/images/External.astro";
 
   <Section classes=" indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block">
-      <img
-        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716541949/wqeqweqwee_cgkdzc.webp"
-        alt=""
-        class="h-full w-full object-cover rounded-3xl"
-      />
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/ishmael-zouitni/ishmael-mockup-1.webp" 
+      alt="Superdisco webiste mockup" 
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+      inferSize={true} 
+      format="webp" 
+      class="h-full w-full object-cover rounded-3xl"/>
     </div>
   </Section>
-  <Section classes="indexCards bg-white relative  flex">
+
+  <Section classes=" indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block">
-      <img
-        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716542314/sdadasdasd_qbmb5d.webp"
-        alt=""
-        class="h-full w-full object-cover rounded-3xl"
-      />
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/ishmael-zouitni/ishmael-mockup-2.webp" 
+      alt="Superdisco webiste mockup" 
+      inferSize={true} 
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+      format="webp" 
+      class="h-full w-full object-cover rounded-3xl"/>
     </div>
   </Section>
-  <Section classes="indexCardsbg-white relative  flex">
+  <Section classes=" bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block">
-      <img
-        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716543046/Macbook_Air_M2_Mockup_5_m3xzio.webp"
-        alt=""
-        class="h-full w-full object-cover rounded-3xl"
-      />
-    </div>
-  </Section>
-  <Section classes=" bg-white relative flex">
-    <div class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col">
-      <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
-        Check out next work
-      </p>
-      <Link classes="work-titles  underline" url="/work/superdisco"
-      >Superdisco</Link>
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/ishmael-zouitni/ishmael-mockup-3.webp" 
+      alt="Superdisco webiste mockup" 
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+      inferSize={true} 
+      format="webp" 
+      class="h-full w-full object-cover rounded-3xl"/>
     </div>
   </Section>
 

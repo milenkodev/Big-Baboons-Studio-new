@@ -3,7 +3,7 @@ import Logo from "../assets/images/Logo.astro";
 import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
-
+import { Image } from "astro:assets";
 ---
 
 
@@ -14,7 +14,7 @@ import BaseLayout from "../layout/BaseLayout.astro";
 
 <BaseLayout>
     <Section
-    classes=" bg-white flex flex-col justify-center items-center "
+    classes="indexCards bg-white flex flex-col justify-center items-center "
   >
     <div class="flex justify-between w-full items-center">
       <a href="/"
@@ -35,51 +35,56 @@ import BaseLayout from "../layout/BaseLayout.astro";
   </Section>
   <Section classes=" indexCards bg-white relative  w-full overflow-clip  group">
     <div
-      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 "
+      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 md:group-hover:bg-black/50 bg-black/50 md:bg-black/0"
     >
       <a
         href="work/superdisco"
-        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300">Superdisco</a
+        class="work-titles  text-white md:opacity-0  group-hover:opacity-100 duration-300">Superdisco</a
       >
     </div>
-      <img
-      src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716438674/Macbook_Air_M2_Mockup_1_cwesf0.webp"
-        class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"
-        alt=""
-      />
+
+
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/superdisco/superdisco-mockup-1" 
+      alt="Superdisco webiste mockup" 
+      inferSize={true} 
+      format="webp" 
+      class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"/>
+
     </div>
   </Section>
   <Section classes=" indexCards bg-white relative  w-full overflow-clip  group">
     <div
-      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 "
+    class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 md:group-hover:bg-black/50 bg-black/50 md:bg-black/0"
     >
       <a
         href="work/gentlemens-barber-club"
-        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300">Gentlemens barber club</a
+        class="work-titles  text-white opacity-100 md:opacity-0 group-hover:opacity-100 duration-300">Gentlemens barber club</a
       >
     </div>
-      <img
-        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716541736/dadasdadassad_mjazro.webp"
-        class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"
-        alt=""
-      />
+    <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/gbc/gbc-mockup-1" 
+    alt="Superdisco webiste mockup" 
+    inferSize={true} 
+    format="webp" 
+    class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"/>
+
     </div>
   </Section>
-
-  <Section classes="  bg-white relative w-full overflow-clip  group">
+  <Section classes="  bg-white relative  w-full overflow-clip  group">
     <div
-      class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 group-hover:bg-black/50 "
+    class="grow flex flex-col items-center justify-center absolute inset-0  duration-300 z-10 md:group-hover:bg-black/50 bg-black/50 md:bg-black/0"
     >
       <a
-        href="work/ishmael-zouitni"
-        class="work-titles  text-white opacity-0 group-hover:opacity-100 duration-300">Ishmael Zouitni</a
+        href="work/gentlemens-barber-club"
+        class="work-titles  text-white opacity-100 md:opacity-0 group-hover:opacity-100 duration-300">Ishmael Zouitni</a
       >
     </div>
-      <img
-      src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716541949/wqeqweqwee_cgkdzc.webp"
-        class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"
-        alt=""
-      />
+    <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/ishmael-zouitni/ishmael-mockup-1" 
+    alt="Superdisco webiste mockup" 
+    inferSize={true} 
+    format="webp" 
+    class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 duration-500"/>
+
+
     </div>
   </Section>
 
