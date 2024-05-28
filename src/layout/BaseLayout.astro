@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import "../style/Style.astro";
+
 ---
 
 <html lang="en">
@@ -10,6 +11,12 @@ import "../style/Style.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preload" as="font" type="font/woff2" href='node_modules/@fontsource/@fontsource/atkinson-hyperlegible/400.css' crossorigin="anonymous"/>
+    <link rel="preload" as="font" type="font/woff2" href='node_modules/@fontsource/@fontsource/atkinson-hyperlegible/700.css' crossorigin="anonymous"/>
+    <link rel="preload" as="font" type="font/woff2" href='node_modules/@fontsource/@fontsource/prompt/900.css' crossorigin="anonymous"/>
+
+
+
     <title>Astro</title>
   </head>
   <body class="bg-black">
@@ -21,10 +28,15 @@ import "../style/Style.astro";
 </html>
 
 <script>
+
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
   import Lenis from "lenis";
+
+
+
+
   const lenis = new Lenis({
     duration: 2,
     touchMultiplier: 2,
@@ -43,11 +55,18 @@ import "../style/Style.astro";
       lenis.scrollTo(this.getAttribute("href"));
     });
   });
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
   let mm = gsap.matchMedia();
 
-  mm.add("(max-width: 426px)", () => {
+  mm.add("(min-width: 426px)", () => {
     const heroText = document.querySelectorAll(".hero-text");
     gsap.from(heroText, {
+      delay:0.5,
       yPercent: 100,
       transformOrigin: "center",
       stagger: 0.2,
@@ -131,4 +150,5 @@ import "../style/Style.astro";
       opacity: 0,
       duration: 0.1,
     });
+  });
 </script>

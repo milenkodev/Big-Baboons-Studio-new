@@ -138,9 +138,9 @@ import { Image } from "astro:assets";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
-
+  document.addEventListener('DOMContentLoaded', () => {
   let mm = gsap.matchMedia();
-  mm.add("(max-width: 426px)", () => {
+  mm.add("(min-width: 426px)", () => {
     
 
   const explainTitle = document.querySelector(".explain-title");
@@ -206,4 +206,5 @@ import { Image } from "astro:assets";
       0
     );
   });
+});
 </script>
