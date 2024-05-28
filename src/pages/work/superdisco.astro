@@ -80,7 +80,7 @@ import { Image } from "astro:assets";
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-auto object-cover rounded-3xl"/>
+      class="h-full w-full object-contain  md:object-cover rounded-3xl"/>
     </div>
   </Section>
   <Section classes=" indexCards bg-white relative  flex">
@@ -91,10 +91,10 @@ import { Image } from "astro:assets";
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover d rounded-3xl"/>
+      class="h-full w-full object-contain md:object-cover  rounded-3xl"/>
     </div>
   </Section>
-  <Section classes="indexCards bg-white relative  flex">
+  <Section classes="indexCards bg-white relative  flex justify-center items-center">
     <div class="absolute inset-0 rounded-3xl block">
       <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/superdisco/superdisco-mockup-3" 
       alt="Superdisco webiste mockup" 
@@ -102,7 +102,7 @@ import { Image } from "astro:assets";
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class=" w-full h-full object-contain md:object-cover rounded-3xl"/>
     </div>
   </Section>
 
