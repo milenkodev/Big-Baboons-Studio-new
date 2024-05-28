@@ -83,15 +83,15 @@ import { Image } from "astro:assets";
       class="h-full w-full object-contain  md:object-cover rounded-3xl"/>
     </div>
   </Section>
-  <Section classes=" indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/superdisco/superdisco-mockup-2" 
+  <Section classes=" indexCards bg-white relative flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716888015/superdisco/superdisco-mockup-2.png" 
       alt="Superdisco webiste mockup" 
       widths={[480,720,1920, 2500]}
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-contain md:object-cover  rounded-3xl"/>
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
     </div>
   </Section>
   <Section classes="indexCards bg-white relative  flex justify-center items-center">
