@@ -1,15 +1,19 @@
 ---
 import Link from "./Link.astro";
-
-
 ---
 
-<nav role="navigation" class="fixed bottom-0 left-0 flex justify-center w-full rounded-lg pointer-events-none  group ">
-  <button aria-expanded="true" class="bg-black  rounded-lg w-14 max-w-16 max-h-16  border-4 border-black group  pointer-events-auto  group peer">
+<nav
+  role="navigation"
+  class="fixed bottom-0 left-0 flex justify-center w-full rounded-lg pointer-events-none group z-50"
+>
+  <button
+    aria-expanded="true"
+    class="bg-black rounded-lg w-14 max-w-16 max-h-16 border-4 border-black group z-50 group peer"
+  >
     <input
       type="checkbox"
       role="button"
-      class=" hidden peer"
+      class="hidden peer menuCB"
       id="menu"
       aria-describedby="menu"
       aria-expanded="false"
@@ -18,37 +22,92 @@ import Link from "./Link.astro";
     />
 
     <label for="menu" id="menuid" class="cursor-pointer">
-      <div class=" flex flex-col justify-center items-center gap-1 p-3 bg-accent rounded-[4px] mb-2 group-hover:mb-4 duration-200 ">
-        <span id="top" class="lines w-2/4 group-hover:w-full group-hover:translate-y-2 group-hover:-rotate-[40deg]"></span>
-        <span id="middle" class="lines w-3/4 group-hover:w-0 "></span>
-        <span id="bottom" class="lines w-full  group-hover:-translate-y-2 group-hover:rotate-[40deg] "></span>
+      <div
+        class="flex flex-col justify-center items-center gap-1 p-3 bg-accent rounded-[4px] mb-2 group-hover:mb-4 duration-200 pointer-events-auto"
+      >
+        <span
+          id="top"
+          class="lines w-2/4 group-hover:w-full group-hover:translate-y-2 group-hover:-rotate-[40deg]"
+        ></span>
+        <span id="middle" class="lines w-3/4 group-hover:w-0"></span>
+        <span
+          id="bottom"
+          class="lines w-full group-hover:-translate-y-2 group-hover:rotate-[40deg]"
+        ></span>
       </div>
-      <div class="w-full absolute bottom-0 left-0 border-b-8 border-black"></div>
+      <div class="w-full absolute bottom-0 left-0 border-b-8 border-black">
+      </div>
     </label>
-
-    
   </button>
 
   <!-- menu -->
-<ul class="flex gap-8 flex-col justify-center items-center w-full  text-white fixed bottom-0 left-0 h-0 peer-has-[:checked]:h-full overflow-clip duration-700 rounded-xl pointer-events-auto bg-accent  ">
-    <li class=" "> <Link url="/" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase hover:underline  ">Home</Link></li>
-    <li> <Link url="/about" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline">about</Link></li>
-    <li> <Link url="/work" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline">work</Link></li>
-    <li> <Link url="/contact" classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt uppercase  hover:underline">contact</Link></li>
+  <ul
+    class="flex gap-8 flex-col justify-center items-center w-full text-white fixed bottom-0 left-0 h-0 peer-has-[:checked]:h-full overflow-clip duration-700 rounded-xl pointer-events-auto bg-accent z-40"
+  >
+  <li class="overflow-clip ">
+    <div class="menulink">
+    <Link
+      url="/"
+      classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline "
+      >Home</Link
+    ></div>
+  </li>
+    <li class="overflow-clip ">
+      <div class="menulink">
+      <Link
+        url="/about"
+        classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline "
+        >About</Link
+      ></div>
+    </li>
+    <li class="overflow-clip ">
+      <div class="menulink">
+      <Link
+        url="/work"
+        classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline "
+        >Work</Link
+      ></div>
+    </li>
+    <li class="overflow-clip ">
+      <div class="menulink">
+      <Link
+        url="/contact"
+        classes="text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt  uppercase  hover:underline "
+        >Contact</Link
+      ></div>
+    </li>
 
   </ul>
-
-
 </nav>
 
 <style>
   .lines {
-    @apply bg-white  h-1 duration-200 transition-all ;
+    @apply bg-white  h-1 duration-200 transition-all;
   }
 
-  li{
-    @apply  w-full h-fit text-center text-5xl
+  li {
+    @apply w-full h-fit text-center text-5xl;
   }
 </style>
 
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
 
+  const menuBtn = document.querySelector(".menuCB");
+  const menuLinks = document.querySelectorAll(".menulink");
+
+  menuBtn.addEventListener("change", () => {
+    if (menuBtn.checked) {
+      gsap.from(menuLinks, {
+        yPercent: 100,
+    
+      // transformOrigin: "center",
+      stagger: 0.2,
+      // duration: 0.5,
+      ease: "power1",
+      });
+    }
+  });
+</script>

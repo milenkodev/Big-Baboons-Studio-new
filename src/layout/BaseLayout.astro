@@ -66,9 +66,9 @@ import "../style/Style.astro";
   mm.add("(min-width: 426px)", () => {
     const heroText = document.querySelectorAll(".hero-text");
     gsap.from(heroText, {
-      delay:0.5,
+
       yPercent: 100,
-      transformOrigin: "center",
+      // transformOrigin: "center",
       stagger: 0.2,
       duration: 1,
       ease: "power1",

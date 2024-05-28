@@ -20,10 +20,10 @@ const { url, classes, target, text } = Astro.props;
   }
 
   .default {
-    @apply relative block px-1 py-1 font-atk font-normal underline duration-500 ;
+    @apply relative block px-1 py-1 font-atk font-normal underline duration-500 pointer-events-auto ;
   }
   .email {
-    @apply relative inline-block  font-atk font-normal underline;
+    @apply relative inline-block  font-atk font-normal underline pointer-events-auto;
     font-size: clamp(1.5rem, 1.4rem + 0.5vw, 4rem);
   }
 
