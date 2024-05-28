@@ -138,6 +138,11 @@ import { Image } from "astro:assets";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
+
+  let mm = gsap.matchMedia();
+  mm.add("(max-width: 426px)", () => {
+    
+
   const explainTitle = document.querySelector(".explain-title");
   const explainText = document.querySelector(".explain-text");
   const explainSection = document.querySelector(".explainSection");
@@ -200,4 +205,5 @@ import { Image } from "astro:assets";
       },
       0
     );
+  });
 </script>

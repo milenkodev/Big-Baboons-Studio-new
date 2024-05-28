@@ -43,85 +43,92 @@ import "../style/Style.astro";
       lenis.scrollTo(this.getAttribute("href"));
     });
   });
+  let mm = gsap.matchMedia();
 
+  mm.add("(max-width: 426px)", () => {
+    const heroText = document.querySelectorAll(".hero-text");
+    gsap.from(heroText, {
+      yPercent: 100,
+      transformOrigin: "center",
+      stagger: 0.2,
+      duration: 1,
+      ease: "power1",
+    });
 
-  const heroText = document.querySelectorAll(".hero-text");
-  gsap.from(heroText, {
-    yPercent: 100,
-    transformOrigin: "center",
-    stagger: 0.2,
-    duration: 1,
-    ease: "power1",
+    const indexCards = document.querySelectorAll(".indexCards");
+    const indexWrapper = document.querySelector(".indexWrapper");
+
+    indexCards.forEach((section) => {
+      const tlIndexCards = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          // end: "bottom bottom",
+          invalidateOnRefresh: true,
+          scrub: true,
+          // markers: true,
+          pin: section,
+        },
+      });
+      tlIndexCards
+        .to(
+          section,
+          {
+            transformOrigin: "center",
+            scale: 0.5,
+            duration: 4,
+            ease: "power1",
+          },
+          0
+        )
+        .to(section, {
+          autoAlpha: 0,
+        });
+    });
+
+  
   });
 
+    // footer
+    const FooterTextUp = document.querySelectorAll(".FooterUp");
 
-  const indexCards = document.querySelectorAll(".indexCards");
-  const indexWrapper = document.querySelector(".indexWrapper");
-
-  indexCards.forEach((section) => {
-    const tlIndexCards = gsap.timeline({
+    const tlFooter = gsap.timeline({
       scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        // end: "bottom bottom",
-        invalidateOnRefresh: true,
-        scrub: true,
+        trigger: ".lastCard",
+        start: "bottom center-=200",
+        end: "bottom bottom",
+        scrub: 1,
         // markers: true,
-        pin: section,
       },
     });
-    tlIndexCards
-      .to(
-        section,
+    tlFooter
+      .from(
+        ".FooterUp",
         {
-          transformOrigin: "center",	
-          scale: 0.5,
-          duration:4,
+          yPercent: 100,
+          duration: 1,
           ease: "power1",
         },
         0
       )
-      .to(section, {
-        autoAlpha: 0,
-      });
-  });
+      .from(
+        ".alter-text",
+        {
+          autoAlpha: 0,
+          rotateY: 90,
+        },
+        0
+      );
 
-// footer
-  const FooterTextUp = document.querySelectorAll(".FooterUp");
-
-  
-  const tlFooter = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.lastCard',
-        start: 'bottom center-=200',
-        end: 'bottom bottom',
-        scrub: 1,
-        // markers: true,
-      },
-  })
-  tlFooter.from('.FooterUp',{
-    yPercent: 100,
-    duration:1,
-    ease: "power1",
-
-    },0).from('.alter-text',{
-      autoAlpha: 0,
-      rotateY: 90,
-      
-    },0)
-
-
-
-
-    gsap.from('.footer',{
+    gsap.from(".footer", {
       scrollTrigger: {
-        trigger: '.lastCard',
-        start: 'start bottom',
+        trigger: ".lastCard",
+        start: "start bottom",
         // end: 'bottom bottom',
         scrub: true,
         // markers: true,
       },
-      opacity:0,
+      opacity: 0,
       duration: 0.1,
-    })
+    });
 </script>
