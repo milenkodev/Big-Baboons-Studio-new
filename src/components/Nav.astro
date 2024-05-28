@@ -98,16 +98,13 @@ import Link from "./Link.astro";
   const menuBtn = document.querySelector(".menuCB");
   const menuLinks = document.querySelectorAll(".menulink");
 
-  menuBtn.addEventListener("change", () => {
-    if (menuBtn.checked) {
-      gsap.from(menuLinks, {
-        yPercent: 100,
-    
-      // transformOrigin: "center",
-      stagger: 0.2,
-      // duration: 0.5,
-      ease: "power1",
-      });
+  menuBtn?.addEventListener("change", () => {
+    if ((menuBtn as HTMLInputElement).checked) {
+        gsap.from(menuLinks, {
+            yPercent: 100,
+            stagger: 0.2,
+            ease: "power1",
+        });
     }
-  });
+});
 </script>
