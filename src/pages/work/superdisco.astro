@@ -31,8 +31,8 @@ import { Image } from "astro:assets";
       >
     </div>
   </Hero>
-  <Section classes="indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
+  <Section classes="indexCards bg-white relative  flex" >
+    <div class="absolute inset-0 rounded-3xl block ">
       <video
         autoplay
         loop
@@ -51,14 +51,14 @@ import { Image } from "astro:assets";
       </video>
     </div>
   </Section>
-  <Section classes="indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
+  <Section classes="indexCards bg-white relative hidden lg:block flex " sectionClass="hidden lg:block">
+    <div class="absolute inset-0 rounded-3xl block ">
       <video
         autoplay
         loop
         muted
         playsinline
-        class="h-full w-full object-cover rounded-3xl"
+        class="h-full w-full lg:object-cover rounded-3xl"
       >
         <source
           src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-desktop.webm"
@@ -80,7 +80,7 @@ import { Image } from "astro:assets";
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class="h-full w-auto object-cover rounded-3xl"/>
     </div>
   </Section>
   <Section classes=" indexCards bg-white relative  flex">
@@ -91,7 +91,7 @@ import { Image } from "astro:assets";
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class="h-full w-full object-cover d rounded-3xl"/>
     </div>
   </Section>
   <Section classes="indexCards bg-white relative  flex">
