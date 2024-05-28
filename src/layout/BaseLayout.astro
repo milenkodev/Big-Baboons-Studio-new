@@ -142,13 +142,25 @@ import "../style/Style.astro";
     gsap.from(".footer", {
       scrollTrigger: {
         trigger: ".lastCard",
-        start: "start bottom",
-        // end: 'bottom bottom',
-        scrub: true,
+        start: "start center",
+        end: 'bottom bottom',
+        scrub: 0.1,
         // markers: true,
       },
       opacity: 0,
       duration: 0.1,
     });
+
+    gsap.from(".footerLogo", {
+      scrollTrigger: {
+        trigger: ".footer",
+        start: "top bottom",
+        end: 'bottom bottom',
+        scrub: 0.1,
+        markers: true,
+      },
+      opacity:0,
+      
+    })
   });
 </script>
