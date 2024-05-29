@@ -3,6 +3,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      screens: {
+        mobile: { 'max': "767px" },
+      },
       animation: {
         marquee: "marquee 2s linear infinite",
       },
