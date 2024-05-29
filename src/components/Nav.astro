@@ -34,8 +34,9 @@ import Link from "./Link.astro";
           class="lines w-2/4 "
         ></span>
         <span
-        :class="{'w-0': open, '': !open}" 
-        id="middle" class="lines w-3/4"></span>
+        :class="{'w-0 opacity-0': open, '': !open}" 
+        id="middle"
+         class="lines w-3/4 "></span>
         <span
         :class="{'-translate-y-2 rotate-[40deg]': open, '': !open}" 
           id="bottom"
