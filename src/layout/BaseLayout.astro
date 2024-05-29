@@ -63,7 +63,7 @@ import "../style/Style.astro";
 
   let mm = gsap.matchMedia();
 
-  mm.add("(min-width: 426px)", () => {
+
     const heroText = document.querySelectorAll(".hero-text");
     gsap.from(heroText, {
 
@@ -162,5 +162,5 @@ import "../style/Style.astro";
       opacity:0,
       
     })
-  });
+
 </script>

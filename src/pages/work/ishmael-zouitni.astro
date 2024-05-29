@@ -30,39 +30,62 @@ import { Image } from "astro:assets";
     </div>
   </Hero>
 
-
   <Section classes=" indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/ishmael-zouitni/ishmael-mockup-1.webp" 
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890911/ishmael-zouitni/ishi-mobile-mockup_kmzo4t.webp" 
       alt="Superdisco webiste mockup" 
       widths={[480,720,1920, 2500]}
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
     </div>
   </Section>
+  
 
   <Section classes=" indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/ishmael-zouitni/ishmael-mockup-2.webp" 
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890287/ishmael-zouitni/ishi-mockup-3_cflkgo.webp" 
       alt="Superdisco webiste mockup" 
-      inferSize={true} 
       widths={[480,720,1920, 2500]}
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+      inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
     </div>
   </Section>
-  <Section classes=" bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/ishmael-zouitni/ishmael-mockup-3.webp" 
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890286/ishmael-zouitni/ishi-mockup-1_hotnlx.webp" 
       alt="Superdisco webiste mockup" 
       widths={[480,720,1920, 2500]}
       sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
+    </div>
+  </Section>
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890288/ishmael-zouitni/ishi-mockup-2_mqem0p.webp" 
+      alt="Superdisco webiste mockup" 
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+      inferSize={true} 
+      format="webp" 
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
+    </div>
+  </Section>
+  <Section classes=" bg-white relative flex">
+    <div
+      class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col"
+    >
+      <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
+        Check out next work
+      </p>
+      <Link classes="work-titles" url="/work/superdisco"
+        >Superdisco</Link
+      >
     </div>
   </Section>
 

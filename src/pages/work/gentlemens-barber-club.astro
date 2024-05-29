@@ -30,14 +30,14 @@ import { Image } from "astro:assets";
     >
     </div>
   </Hero>
-  <Section classes="indexCards bg-white relative  flex">
+  <Section classes="indexCards bg-white relative  flex" sectionClass="hidden lg:block">
     <div class="absolute inset-0 rounded-3xl block">
       <video
         autoplay
         loop
         muted
         playsinline
-        class="h-full w-full object-cover rounded-3xl"
+        class="h-full w-full lg:object-cover rounded-3xl"
       >
         <source
           src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/gbc/gbc-vid-desktop.webm"
@@ -50,40 +50,55 @@ import { Image } from "astro:assets";
       </video>
     </div>
   </Section>
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890880/gbc/gbc-mockup-1_hrn6u2.webp" 
+      alt="Superdisco webiste mockup" 
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+      inferSize={true} 
+      format="webp" 
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
+    </div>
+  </Section>
+
 
   <Section classes=" indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/gbc/gbc-mockup-2" 
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-3_c62pmq.webp" 
       alt="Superdisco webiste mockup" 
-      widths={[480,720,1920,]}
-      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px`}
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
+    </div>
+  </Section>
+  
+
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890642/gbc/gbc-mockup-4_qdptbv.webp" 
+      alt="Superdisco webiste mockup" 
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+      inferSize={true} 
+      format="webp" 
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
     </div>
   </Section>
   <Section classes=" indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/gbc/gbc-mockup-3" 
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-2_kw3aux.webp" 
       alt="Superdisco webiste mockup" 
-      widths={[480,720,1920, ]}
-      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px`}
+      widths={[480,720,1920, 2500]}
+      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
       inferSize={true} 
       format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
+      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
     </div>
   </Section>
-  <Section classes=" indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/f_auto,q_auto/v1/gbc/gbc-mockup-4" 
-      alt="Superdisco webiste mockup" 
-      widths={[480,720,1920,]}
-      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px`}
-      inferSize={true} 
-      format="webp" 
-      class="h-full w-full object-cover rounded-3xl"/>
-    </div>
-  </Section>
+  
 
   <Section classes=" bg-white relative flex">
     <div class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col ">
