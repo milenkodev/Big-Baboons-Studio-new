@@ -5,12 +5,14 @@ import Link from "./Link.astro";
 <nav
   role="navigation"
   class="fixed bottom-0 left-0 flex justify-center w-full rounded-lg pointer-events-none group z-50"
+  x-data="{open: false}"
 >
   <button
     aria-expanded="true"
-    class="bg-black rounded-lg w-14 max-w-16 max-h-16 border-4 border-black group z-50 group peer"
+    class="bg-black rounded-lg w-14 max-w-16 max-h-16 border-4 border-black group z-50 group peer "
   >
     <input
+      @click="open = !open"
       type="checkbox"
       role="button"
       class="hidden peer menuCB"
@@ -21,18 +23,23 @@ import Link from "./Link.astro";
       aria-label="Toggle navigation"
     />
 
-    <label for="menu" id="menuid" class="cursor-pointer">
+    <label for="menu" id="menuid" class="cursor-pointer group-hover:-translate-y-4">
       <div
-        class="flex flex-col justify-center items-center gap-1 p-3 bg-accent rounded-[4px] mb-2 group-hover:mb-4 duration-200 pointer-events-auto"
+      
+        class="flex flex-col justify-center items-center gap-1 p-3  bg-accent rounded-[4px] mb-2 group-hover:mb-4 duration-200 pointer-events-auto "
       >
         <span
           id="top"
-          class="lines w-2/4 group-hover:w-full group-hover:translate-y-2 group-hover:-rotate-[40deg]"
+          :class="{'w-full translate-y-2 -rotate-[40deg]': open, '': !open}" 
+          class="lines w-2/4 "
         ></span>
-        <span id="middle" class="lines w-3/4 group-hover:w-0"></span>
         <span
+        :class="{'w-0': open, '': !open}" 
+        id="middle" class="lines w-3/4"></span>
+        <span
+        :class="{'-translate-y-2 rotate-[40deg]': open, '': !open}" 
           id="bottom"
-          class="lines w-full group-hover:-translate-y-2 group-hover:rotate-[40deg]"
+          class="lines w-full"
         ></span>
       </div>
       <div class="w-full absolute bottom-0 left-0 border-b-8 border-black">
