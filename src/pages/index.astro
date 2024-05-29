@@ -4,6 +4,7 @@ import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
 import { Image } from "astro:assets";
+import PointingDown from "../assets/icons/PointingDown.astro";          
 ---
 
 <BaseLayout>
@@ -18,7 +19,7 @@ import { Image } from "astro:assets";
       <div class="overflow-clip"><h1 class="hero-text">We build</h1></div>
       <div class="overflow-clip"><h1 class="hero-text">dope websites</h1></div>
 
-      <div class="marquee__wrapper relative mt-4  duration-300 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient-to-r from-white via-white/0 to-white before:z-10 ">
+      <div class="marquee__wrapper relative mt-4 gap-3  duration-300 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient-to-r from-white via-white/0 to-white before:z-10 ">
         <ul class="marquee">
           <li>Web Development</li>
           <li>Web Design</li>
@@ -33,11 +34,9 @@ import { Image } from "astro:assets";
         </ul>
       </div>
 
-      <img
-        src="/public/pointing-down.svg"
-        alt="hand pointing down to scroll"
-        class="absolute bottom-12 right-8 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] animate-bounce"
-      />
+      <div class="absolute bottom-0 right-4 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] max-w-16 ">
+        <PointingDown />
+      </div>
     </div>
   </Section>
   <Section

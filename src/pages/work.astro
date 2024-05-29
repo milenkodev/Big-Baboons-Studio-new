@@ -1,4 +1,5 @@
 ---
+import PointingDown from "../assets/icons/PointingDown.astro";
 import Logo from "../assets/images/Logo.astro";
 import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
@@ -17,11 +18,9 @@ import { Image } from "astro:assets";
     <div class="grow flex flex-col items-center justify-center">
       <div class="overflow-clip"><h1 class="hero-text">Work</h1></div>
 
-      <img
-        src="/public/pointing-down.svg"
-        alt="hand pointing down to scroll"
-        class="absolute bottom-12 right-8 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] animate-bounce"
-      />
+      <div class="absolute bottom-0 right-4 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] max-w-16 ">
+        <PointingDown />
+      </div>
     </div>
   </Section>
   <Section classes=" indexCards bg-white relative flex group">

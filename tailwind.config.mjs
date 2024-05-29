@@ -8,8 +8,36 @@ export default {
       },
       animation: {
         marquee: "marquee 2s linear infinite",
+        pointer: "pointer 2s linear infinite",
+        pointerReverse: "pointerReverse 2s linear infinite",
       },
+   
       keyframes: {
+        pointerReverse:{
+          "0%": {
+            transform: "translateY(-24px)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+          },
+          "100%": {
+            transform: "translateY(-24px)",
+          },
+        },
+        pointer:{
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-24px)",
+          },
+          "100%": {
+            transform:
+              "translateY(0)",
+          },
+        },
+
+        
         marquee: {
           "0%": {
             transform: "translateX(0)",
