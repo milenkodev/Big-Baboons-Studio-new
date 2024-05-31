@@ -149,8 +149,8 @@ import PointingDown from "../assets/icons/PointingDown.astro";
   gsap.registerPlugin(ScrollTrigger);
 
   document.addEventListener("DOMContentLoaded", () => {
-    let mm = gsap.matchMedia();
-    mm.add("(min-width: 426px)", () => {
+    // let mm = gsap.matchMedia();
+    // mm.add("(min-width: 426px)", () => {
       const explainTitle = document.querySelector(".explain-title");
       const explainText = document.querySelector(".explain-text");
       const explainSection = document.querySelector(".explainSection");
@@ -221,6 +221,6 @@ import PointingDown from "../assets/icons/PointingDown.astro";
           },
           0
         );
-    });
+    // });
   });
 </script>
