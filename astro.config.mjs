@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
+import swup from '@swup/astro';
 import tailwind from "@astrojs/tailwind";
-
 import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config

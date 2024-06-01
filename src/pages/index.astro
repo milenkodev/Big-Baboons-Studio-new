@@ -5,16 +5,16 @@ import Section from "../components/Section.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
 import { Image } from "astro:assets";
 import PointingDown from "../assets/icons/PointingDown.astro";
+
 ---
 
-<BaseLayout>
+<BaseLayout   >
   <Section
     classes=" bg-white flex flex-col justify-center items-center heroSection overflow-clip"
   >
     <div class="flex justify-between w-full items-center">
-  
-        <a href="/" class=""><Logo/></a>
-  
+      <a href="/" class=""><Logo /></a>
+
       <Link classes="cta" url="contact">Let's have a chat!</Link>
     </div>
     <div class="grow flex flex-col items-center justify-center">
@@ -99,7 +99,7 @@ import PointingDown from "../assets/icons/PointingDown.astro";
   </Section>
   <Section classes=" indexCards bg-white relative flex group">
     <div
-      class="grow flex flex-col items-center justify-center absolute inset-0 duration-300 z-10 group-hover:bg-black/50  bg-black/0"
+      class="grow flex flex-col items-center justify-center absolute inset-0 duration-300 z-10 group-hover:bg-black/50 bg-black/0"
     >
       <a
         href="work/gentlemens-barber-club"
@@ -149,8 +149,9 @@ import PointingDown from "../assets/icons/PointingDown.astro";
   gsap.registerPlugin(ScrollTrigger);
 
   document.addEventListener("DOMContentLoaded", () => {
-    // let mm = gsap.matchMedia();
-    // mm.add("(min-width: 426px)", () => {
+    function init() {
+      // let mm = gsap.matchMedia();
+      // mm.add("(min-width: 426px)", () => {
       const explainTitle = document.querySelector(".explain-title");
       const explainText = document.querySelector(".explain-text");
       const explainSection = document.querySelector(".explainSection");
@@ -221,6 +222,8 @@ import PointingDown from "../assets/icons/PointingDown.astro";
           },
           0
         );
-    // });
+    }
+    document.addEventListener("astro:after-swap", init);
+    init();
   });
 </script>
