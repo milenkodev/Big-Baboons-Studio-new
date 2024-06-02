@@ -144,86 +144,18 @@ import PointingDown from "../assets/icons/PointingDown.astro";
 </BaseLayout>
 
 <script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  gsap.registerPlugin(ScrollTrigger);
 
-  document.addEventListener("DOMContentLoaded", () => {
-    function init() {
-      // let mm = gsap.matchMedia();
-      // mm.add("(min-width: 426px)", () => {
-      const explainTitle = document.querySelector(".explain-title");
-      const explainText = document.querySelector(".explain-text");
-      const explainSection = document.querySelector(".explainSection");
-      // const explainBtn = document.querySelector(".explainBtn");
 
-      const explainTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: explainSection,
-          start: "top center",
-          end: "bottom bottom",
-          scrub: 1,
-          // markers: true,
-        },
-      });
 
-      explainTl
-        .from(
-          explainTitle,
-          {
-            yPercent: 100,
-            transformOrigin: "center",
-            // duration: 1,
-            ease: "power1",
-          },
-          0
-        )
-        .from(
-          explainText,
-          {
-            yPercent: 100,
-            transformOrigin: "center",
-            // duration: 1.5,
-            ease: "power1",
-          },
-          0.3
-        );
 
-      const toThePointSection = document.querySelector(".to-the-point");
-      const toThePointText = document.querySelectorAll(".to-the-point-text-1");
-      const toThePointText2 = document.querySelectorAll(".to-the-point-text-2");
 
-      const tlttp = gsap.timeline({
-        scrollTrigger: {
-          trigger: toThePointSection,
-          start: "top center+=400",
-          end: "bottom bottom",
-          scrub: 2,
-          // markers: true,
-        },
-      });
 
-      tlttp
-        .from(
-          toThePointText,
-          {
-            xPercent: 200,
 
-            ease: "power4",
-          },
-          0
-        )
-        .from(
-          toThePointText2,
-          {
-            xPercent: -200,
 
-            ease: "power4",
-          },
-          0
-        );
-    }
-    document.addEventListener("astro:after-swap", init);
-    init();
-  });
+
+
+  //   }
+  //   document.addEventListener("astro:after-swap", init);
+  //   init();
+  // });
 </script>

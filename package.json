@@ -17,6 +17,7 @@
     "@fontsource/permanent-marker": "^5.0.12",
     "@fontsource/prompt": "^5.0.14",
     "@swup/astro": "^1.4.1",
+    "@swup/head-plugin": "^2.2.0",
     "@types/alpinejs": "^3.13.10",
     "alpinejs": "^3.14.0",
     "astro": "^4.8.5",

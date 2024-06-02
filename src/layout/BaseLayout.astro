@@ -1,19 +1,11 @@
 ---
+import Logo from "../assets/images/Logo.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import "../style/Style.astro";
-
-
-import { ViewTransitions, fade } from "astro:transitions";
-
-
-
-
-
-
 ---
 
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -42,148 +34,40 @@ import { ViewTransitions, fade } from "astro:transitions";
     />
 
     <title>Astro</title>
-    <ViewTransitions />
   </head>
-  <body class="bg-black" >
-    <main>
-    <Nav  />
-    <slot   />
-    <div class="lastCard hidden"></div>
-    <Footer />
-  </main>
-  </body>
-  
-  
-  
-  
-</html>
+  <body class="bg-black">
+    <main id="swup" class="transition-main">
+      <Nav />
+      <slot />
+      <div class="lastCard hidden"></div>
+      <Footer />
+    </main>
+    <div class="overlay transition-overlay flex justify-center items-center">
+      <div class="overflow-clip">
+        <Logo classes="fill-white min-w-[124px] md:min-w-[200px] logo-overlay transition-logo" />
+      </div>
+    </div>
+    <script>
+      import Lenis from "lenis";
 
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  gsap.registerPlugin(ScrollTrigger);
-  import Lenis from "lenis";
-
-  const lenis = new Lenis({
-    duration: 2,
-    touchMultiplier: 4,
-  });
-
-  function raf(time: number) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      lenis.scrollTo(this.getAttribute("href"));
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    
-    function init() {
-      const heroText = document.querySelectorAll(".hero-text");
-      gsap.from(heroText, {
-        yPercent: 100,
-        // transformOrigin: "center",
-        stagger: 0.2,
-        duration: 1,
-        ease: "power1",
+      const lenis = new Lenis({
+        duration: 2,
+        touchMultiplier: 4,
       });
 
-      const indexCards = document.querySelectorAll(".indexCards");
-      const indexWrapper = document.querySelector(".indexWrapper");
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
 
-      indexCards.forEach((section) => {
-        const tlIndexCards = gsap.timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            // end: "bottom bottom",
-            invalidateOnRefresh: true,
-            scrub: true,
-            // markers: true,
-            pin: section,
-          },
+      requestAnimationFrame(raf);
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          lenis.scrollTo(this.getAttribute("href"));
         });
-        tlIndexCards
-          .to(
-            section,
-            {
-              transformOrigin: "center",
-              scale: 0.5,
-              duration: 4,
-              ease: "power1",
-            },
-            0
-          )
-          .to(section, {
-            autoAlpha: 0,
-          });
       });
-
-      // footer
-      const FooterTextUp = document.querySelectorAll(".FooterUp");
-
-      const tlFooter = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".lastCard",
-          start: "bottom center-=200",
-          end: "bottom bottom",
-          scrub: 1,
-          // markers: true,
-        },
-      });
-      tlFooter
-        .from(
-          ".FooterUp",
-          {
-            yPercent: 100,
-            duration: 1,
-            ease: "power1",
-          },
-          0
-        )
-        .from(
-          ".alter-text",
-          {
-            autoAlpha: 0,
-            rotateY: 90,
-          },
-          0
-        );
-
-      gsap.from(".footer", {
-        scrollTrigger: {
-          trigger: ".lastCard",
-          start: "start center",
-          end: "bottom bottom",
-          scrub: 0.1,
-          // markers: true,
-        },
-        opacity: 0,
-        display: "hidden",
-        duration: 0.1,
-      });
-
-      gsap.from(".footerLogo", {
-        scrollTrigger: {
-          trigger: ".footer",
-          start: "top bottom",
-          end: "bottom bottom",
-          scrub: 0.1,
-          // markers: true,
-        },
-        display: "none",
-        opacity: 0,
-      });
-    }
-
-    document.addEventListener("astro:after-swap", init);
-    init();
-  });
-</script>
+    </script>
+    <script src="../script/main.js"></script>
+  </body>
+</html>
