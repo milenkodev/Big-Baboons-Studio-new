@@ -8,7 +8,7 @@ export default defineConfig({
     defaultLocale: "nl",
     locales: ["en", "nl"],
     routing: {
-      prefixDefaultLocale: true,
+      prefixDefaultLocale: false,
     },
   },
   integrations: [tailwind(), alpinejs()],
