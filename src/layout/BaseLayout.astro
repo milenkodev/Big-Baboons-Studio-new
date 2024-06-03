@@ -3,7 +3,7 @@ import Logo from "../assets/images/Logo.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import "../style/Style.astro";
-const { title} = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -13,6 +13,7 @@ const { title} = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/x-icon" href="/favicon.svg"/>
+    <meta name="description" content={description}>
     <!-- <link
       rel="preload"
       as="font"

@@ -8,7 +8,14 @@ import External from "../../../assets/images/External.astro";
 import { Image } from "astro:assets";
 ---
 
-<BaseLayout title="Gentlemens Barber Club | Big Baboons Studio">
+<BaseLayout
+  title="Gentlemens Barber Club | Big Baboons Studio"
+  description="A landing page website for a small barber shop in the Netherlands.
+Specializing in classic and modern haircuts, the site makes booking
+appointments with Rotterdam's top barber a breeze. It's designed for a
+smooth user experience, is SEO-friendly, and delivers optimal
+performance!"
+>
   <Hero classes="bg-white h-[20%] flex flex-col">
     <div class="flex justify-between w-full items-center">
       <a href="/en/" class=""><Logo /></a>
@@ -32,13 +39,16 @@ import { Image } from "astro:assets";
         performance!"
       </p>
       <Link
-      url="https://gentlemens-barber-club.vercel.app/"
-      classes="flex gap-1 justify-center items-center underline font-atk font-bold"
-      target="_blank">Check it live <External/></Link
-    >
+        url="https://gentlemens-barber-club.vercel.app/"
+        classes="flex gap-1 justify-center items-center underline font-atk font-bold"
+        target="_blank">Check it live <External /></Link
+      >
     </div>
   </Hero>
-  <Section classes="indexCards bg-white relative  flex" sectionClass="hidden lg:block">
+  <Section
+    classes="indexCards bg-white relative  flex"
+    sectionClass="hidden lg:block"
+  >
     <div class="absolute inset-0 rounded-3xl block">
       <video
         autoplay
@@ -60,61 +70,69 @@ import { Image } from "astro:assets";
   </Section>
   <Section classes=" indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block overflow-clip">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890880/gbc/gbc-mockup-1_hrn6u2.webp" 
-      alt="Superdisco webiste mockup" 
-      widths={[480,720,1920, 2500]}
-      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
-      inferSize={true} 
-      format="webp" 
-      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890880/gbc/gbc-mockup-1_hrn6u2.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
     </div>
   </Section>
 
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-3_c62pmq.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
 
   <Section classes=" indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block overflow-clip">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-3_c62pmq.webp" 
-      alt="Superdisco webiste mockup" 
-      widths={[480,720,1920, 2500]}
-      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
-      inferSize={true} 
-      format="webp" 
-      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
-    </div>
-  </Section>
-  
-
-  <Section classes=" indexCards bg-white relative  flex">
-    <div class="absolute inset-0 rounded-3xl block overflow-clip">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890642/gbc/gbc-mockup-4_qdptbv.webp" 
-      alt="Superdisco webiste mockup" 
-      widths={[480,720,1920, 2500]}
-      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
-      inferSize={true} 
-      format="webp" 
-      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890642/gbc/gbc-mockup-4_qdptbv.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
     </div>
   </Section>
   <Section classes=" indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block overflow-clip">
-      <Image src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-2_kw3aux.webp" 
-      alt="Superdisco webiste mockup" 
-      widths={[480,720,1920, 2500]}
-      sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
-      inferSize={true} 
-      format="webp" 
-      class="h-full w-full    object-contain scale-150 md:object-cover md:scale-100  rounded-3xl"/>
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-2_kw3aux.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
     </div>
   </Section>
-  
 
   <Section classes=" bg-white relative flex">
-    <div class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col ">
+    <div
+      class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col"
+    >
       <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
         Check out next work
       </p>
       <Link classes="work-titles  underline" url="/en/work/ishmael-zouitni"
-      >Ishmael Zouitni</Link>
+        >Ishmael Zouitni</Link
+      >
     </div>
   </Section>
 </BaseLayout>

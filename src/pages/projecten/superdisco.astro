@@ -8,7 +8,15 @@ import { Image } from "astro:assets";
 import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
 ---
 
-<BaseLayoutDutch title="Superdisco | Big Baboons Studio">
+<BaseLayoutDutch
+  title="Superdisco | Big Baboons Studio"
+  description="Een dynamische landingspagina voor een van de vooraanstaande nachtclubs
+van Rotterdam. Deze op maat gemaakte website beschikt over een
+geïntegreerd CMS, waardoor de klant moeiteloos afbeeldingsgalerijen kan
+bijwerken en komende evenementen kan aankondigen. De site is
+geoptimaliseerd voor topprestaties, SEO-vriendelijk en ontworpen voor
+een soepele, boeiende gebruikerservaring."
+>
   <Hero classes="bg-white h-[20%] flex flex-col">
     <div class="flex justify-between w-full items-center">
       <a href="/"><Logo /></a>
@@ -131,11 +139,11 @@ import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
       class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col"
     >
       <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
-      Check dit project
+        Check dit project
       </p>
       <Link classes="work-titles" url="/projecten/gentlemens-barber-club"
         >Gentlemens Barber Club</Link
       >
     </div>
   </Section>
-</BaseLayout>
+</BaseLayoutDutch>
