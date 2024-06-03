@@ -64,12 +64,12 @@ const { title, description } = Astro.props;
       }
 
       requestAnimationFrame(raf);
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          lenis.scrollTo(this.getAttribute("href"));
-        });
-      });
+      // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      //   anchor.addEventListener("click", function (e) {
+      //     e.preventDefault();
+      //     lenis.scrollTo(this.getAttribute("href"));
+      //   });
+      // });
     </script>
     <script src="../script/main.js"></script>
   </body>
