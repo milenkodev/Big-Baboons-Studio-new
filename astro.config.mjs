@@ -1,10 +1,13 @@
 import { defineConfig } from 'astro/config';
-import swup from '@swup/astro';
 import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
+ i18n: {
+   defaultLocale: 'nl',
+   locales: ['en', 'nl'],
+  },
   integrations: [tailwind(), alpinejs(), ],
   image: {
     domains: ['res.cloudinary.com']

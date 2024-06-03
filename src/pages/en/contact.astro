@@ -1,0 +1,37 @@
+---
+import Link from "../../components/Link.astro";
+import Section from "../../components/Section.astro";
+import BaseLayout from "../../layout/BaseLayout.astro";
+import Logo from "../../assets/images/Logo.astro"
+import PointingDown from "../../assets/icons/PointingDown.astro";
+---
+
+<BaseLayout title="Contact us| Big Baboons Studio">
+  <Section classes="bg-white flex flex-col justify-center items-center ">
+    <div class="flex justify-between w-full items-center">
+      <a href="/en/" class=""><Logo /></a>
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-1">
+          <Link classes="text-lg pointer-events-none " url="">EN</Link> / <Link
+            classes=" font-black text-lg font-black underline text-accent"
+            url="/contact">NL</Link
+          >
+        </div>
+        <Link classes="cta" url="contact">Let's have a chat!</Link>
+      </div>
+    </div>
+    <div class="grow flex flex-col items-center justify-center gap-6">
+      <div class="overflow-clip"><h1 class="hero-text">Contact</h1></div>
+      
+      <p class="max-w-[480px] text-center ">
+        Have a project, an idea, a thought or you just want to have a simple
+        chat? — We would love to hear from you! 
+      </p>
+
+      <div class="absolute bottom-0 right-4 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] max-w-16 ">
+        <PointingDown />
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+   

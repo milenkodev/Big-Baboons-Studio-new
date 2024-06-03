@@ -1,18 +1,26 @@
 ---
-import Logo from "../../assets/images/Logo.astro";
-import Hero from "../../components/Hero.astro";
-import Link from "../../components/Link.astro";
-import Section from "../../components/Section.astro";
-import BaseLayout from "../../layout/BaseLayout.astro";
-import External from "../../assets/images/External.astro";
+import Logo from "../../../assets/images/Logo.astro";
+import Hero from "../../../components/Hero.astro";
+import Link from "../../../components/Link.astro";
+import Section from "../../../components/Section.astro";
+import BaseLayout from "../../../layout/BaseLayout.astro";
+import External from "../../../assets/images/External.astro";
 import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="Superdisco | Big Baboons Studio">
   <Hero classes="bg-white h-[20%] flex flex-col">
     <div class="flex justify-between w-full items-center">
-      <a href="/"><Logo /></a>
-      <Link classes="cta" url="/contact">Let's have a chat!</Link>
+      <a href="/en/" class=""><Logo /></a>
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-1">
+          <Link classes="text-lg pointer-events-none " url="">EN</Link> / <Link
+            classes=" font-black text-lg font-black underline text-accent"
+            url="/projecten/superdisco">NL</Link
+          >
+        </div>
+        <Link classes="cta" url="contact">Let's have a chat!</Link>
+      </div>
     </div>
     <div class="grow flex flex-col items-center justify-center h-auto gap-12">
       <h1 class="">Superdisco</h1>
@@ -113,7 +121,7 @@ import { Image } from "astro:assets";
       <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
         Check out next work
       </p>
-      <Link classes="work-titles" url="/work/gentlemens-barber-club"
+      <Link classes="work-titles" url="/en/work/gentlemens-barber-club"
         >Gentlemens Barber Club</Link
       >
     </div>

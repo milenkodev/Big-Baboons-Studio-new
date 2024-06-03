@@ -1,0 +1,141 @@
+---
+import Logo from "../../assets/images/Logo.astro";
+import Hero from "../../components/Hero.astro";
+import Link from "../../components/Link.astro";
+import Section from "../../components/Section.astro";
+import External from "../../assets/images/External.astro";
+import { Image } from "astro:assets";
+import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
+---
+
+<BaseLayoutDutch title="Superdisco | Big Baboons Studio">
+  <Hero classes="bg-white h-[20%] flex flex-col">
+    <div class="flex justify-between w-full items-center">
+      <a href="/"><Logo /></a>
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-1">
+          <Link
+            classes="font-black text-lg font-black underline text-accent"
+            url="/en/work/superdisco">EN</Link
+          > / <Link classes=" text-lg pointer-events-none" url="">NL</Link>
+        </div>
+        <Link classes="cta" url="contact">Laten we praten!</Link>
+      </div>
+    </div>
+    <div class="grow flex flex-col items-center justify-center h-auto gap-12">
+      <h1 class="">Superdisco</h1>
+      <p class="max-w-screen-lg text-center">
+        "Een dynamische landingspagina voor een van de vooraanstaande nachtclubs
+        van Rotterdam. Deze op maat gemaakte website beschikt over een
+        geïntegreerd CMS, waardoor de klant moeiteloos afbeeldingsgalerijen kan
+        bijwerken en komende evenementen kan aankondigen. De site is
+        geoptimaliseerd voor topprestaties, SEO-vriendelijk en ontworpen voor
+        een soepele, boeiende gebruikerservaring."
+      </p>
+
+      <Link
+        url="https://www.superdiscorotterdam.nl"
+        classes="flex gap-1 justify-center items-center underline font-atk font-bold"
+        target="_blank">Bekijk het live <External /></Link
+      >
+    </div>
+  </Hero>
+  <Section classes="indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="h-full w-full object-cover rounded-3xl"
+      >
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-mobile.webp"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-mobile.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </Section>
+  <Section
+    classes="indexCards bg-white relative hidden lg:block flex "
+    sectionClass="hidden lg:block"
+  >
+    <div class="absolute inset-0 rounded-3xl block">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="h-full w-full lg:object-cover rounded-3xl"
+      >
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-desktop.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-desktop.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </Section>
+
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716889812/superdisco/superdisco-mockup-1.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
+  <Section classes=" indexCards bg-white relative flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716889620/superdisco/superdisco-mockup-2.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
+  <Section
+    classes="indexCards bg-white relative  flex justify-center items-center"
+  >
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716889973/superdisco/superdisco-mockup-3_jjwsaq.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-125 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
+
+  <Section classes=" bg-white relative flex">
+    <div
+      class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col"
+    >
+      <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
+      Check dit project
+      </p>
+      <Link classes="work-titles" url="/projecten/gentlemens-barber-club"
+        >Gentlemens Barber Club</Link
+      >
+    </div>
+  </Section>
+</BaseLayout>

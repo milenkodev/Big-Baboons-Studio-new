@@ -1,0 +1,132 @@
+---
+import Logo from "../../assets/images/Logo.astro";
+import Hero from "../../components/Hero.astro";
+import Link from "../../components/Link.astro";
+import Section from "../../components/Section.astro";
+import External from "../../assets/images/External.astro";
+import { Image } from "astro:assets";
+import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
+---
+
+<BaseLayoutDutch title="Gentlemens Barber Club | Big Baboons Studio">
+  <Hero classes="bg-white h-[20%] flex flex-col">
+    <div class="flex justify-between w-full items-center">
+      <a href="/"><Logo /></a>
+
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-1">
+          <Link
+            classes="font-black text-lg font-black underline text-accent"
+            url="/en/work/gentlemens-barbers-club">EN</Link
+          > / <Link classes=" text-lg pointer-events-none" url="">NL</Link>
+        </div>
+        <Link classes="cta" url="contact">Laten we praten!</Link>
+      </div>
+    </div>
+    <div class="grow flex flex-col items-center justify-center h-auto gap-12">
+      <h1 class="long-header-1">Gentlemens Barber Club</h1>
+      <p class="max-w-screen-lg text-center">
+        "Een landingspagina voor een kleine barbershop in Nederland.
+        Gespecialiseerd in klassieke en moderne kapsels, maakt de website het
+        eenvoudig om afspraken te maken met de beste barbier van Rotterdam.
+        Ontworpen voor een vloeiende gebruikerservaring, is de site
+        SEO-vriendelijk en levert optimale prestaties!"
+      </p>
+      <Link
+        url="https://gentlemens-barber-club.vercel.app/"
+        classes="flex gap-1 justify-center items-center underline font-atk font-bold"
+        target="_blank">Bekijk het live <External /></Link
+      >
+    </div>
+  </Hero>
+  <Section
+    classes="indexCards bg-white relative  flex"
+    sectionClass="hidden lg:block"
+  >
+    <div class="absolute inset-0 rounded-3xl block">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="h-full w-full lg:object-cover rounded-3xl"
+      >
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/gbc/gbc-vid-desktop.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/gbc/gbc-vid-desktop.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </Section>
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890880/gbc/gbc-mockup-1_hrn6u2.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
+
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-3_c62pmq.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
+
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890642/gbc/gbc-mockup-4_qdptbv.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
+  <Section classes=" indexCards bg-white relative  flex">
+    <div class="absolute inset-0 rounded-3xl block overflow-clip">
+      <Image
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716890640/gbc/gbc-mockup-2_kw3aux.webp"
+        alt="Superdisco webiste mockup"
+        widths={[480, 720, 1920, 2500]}
+        sizes={`(max-width: 540px) 480px, (max-width: 720px) 720px, (max-width: 1920px) 1920px, 2500px`}
+        inferSize={true}
+        format="webp"
+        class="h-full w-full object-contain scale-150 md:object-cover md:scale-100 rounded-3xl"
+      />
+    </div>
+  </Section>
+
+  <Section classes=" bg-white relative flex">
+    <div
+      class="absolute inset-0 rounded-3xl flex justify-center items-center flex-col"
+    >
+      <p class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)] font-atk">
+        Check dit project
+      </p>
+      <Link classes="work-titles  underline" url="/projecten/ishmael-zouitni"
+        >Ishmael Zouitni</Link
+      >
+    </div>
+  </Section>
+</BaseLayoutDutch>

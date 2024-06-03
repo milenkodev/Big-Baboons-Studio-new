@@ -1,0 +1,190 @@
+---
+import Logo from "../assets/images/Logo.astro";
+import Link from "../components/Link.astro";
+import Section from "../components/Section.astro";
+import Design from "../assets/icons/Design.astro";
+import Dev from "../assets/icons/Dev.astro";
+import Eye from "../assets/icons/Eye.astro";
+import PointingDown from "../assets/icons/PointingDown.astro";
+import BaseLayoutDutch from "../layout/BaseLayoutDutch.astro";
+---
+
+<BaseLayoutDutch title="Over ons | Big Baboons Studio">
+  <Section classes=" bg-white flex flex-col justify-center items-center ">
+    <div class="flex justify-between w-full items-center">
+      <a href="/"><Logo /></a>
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-1">
+          <Link classes="font-black text-lg font-black underline text-accent" url="/en/about">EN</Link> / <Link
+            classes=" text-lg pointer-events-none"
+            url="">NL</Link
+          >
+        </div>
+        <Link classes="cta" url="contact">Laten we praten!</Link>
+      </div>
+    </div>
+    <div class="grow flex flex-col items-center justify-center gap-6">
+      <div class="overflow-clip"><h1 class="hero-text">Over ons</h1></div>
+
+      <div
+        class="absolute bottom-0 right-4 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] max-w-16"
+      >
+        <PointingDown />
+      </div>
+    </div>
+  </Section>
+  <Section
+    classes=" text-white flex flex-col justify-center items-center  gap-8 bg-black"
+  >
+    <p
+      class="max-w-screen-lg text-[clamp(1.125rem,_0.9rem_+_1.125vw,_2.25rem)] text-justify"
+    >
+      Een onafhankelijke digitale studio gevestigd in Rotterdam, Big Baboons
+      Studio combineert creativiteit en technologie om uw digitale dromen
+      werkelijkheid te maken. Als dynamisch webbureau helpen we bedrijven een
+      sterke online aanwezigheid op te bouwen. We creëren prachtige, functionele
+      websites die uw brand presenteren en uw publiek betrekken. Met innovatief
+      ontwerp en de nieuwste technologie brengen we uw visie tot leven.
+    </p>
+  </Section>
+  <Section
+    classes=" indexCards  bg-accent flex flex-col justify-center items-center"
+  >
+    <div class="overflow-clip">
+      <h1 class="hero-text text-white">Wat wij doen</h1>
+    </div>
+  </Section>
+  <Section
+    sectionClass=" mobile:h-auto min-h-screen"
+    classes="relative   w-full bg-white  flex flex-col justify-center items-center gap-4   "
+  >
+    <div
+      class="group peer flex flex-col lg:flex-row justify-center lg:justify-between gap-3 lg:gap-12 items-center px-6 lg:px-8 py-12 w-full border-4 border-black rounded-3xl hover:translate-y-1 transition-all duration-500 shadow-[0px_8px_0px_0px_rgba(28,28,28)] hover:shadow-[0px_0px_0px_0px_rgba(28,28,28)] max-w-screen-2xl h-full"
+    >
+      <div class="w-full max-w-16 lg:max-w-32">
+        <Design />
+      </div>
+      <div class="text-center lg:text-justify w-full grow">
+        <h2>Design</h2>
+        <div
+          class="lg:grid grid-rows-[0fr] group-hover:grid-rows-[2fr] transition-all duration-500"
+        >
+          <p class="overflow-hidden text-lg lg:text-xl">
+            Onze ontwerpstrategieën beginnen met grondig onderzoek om uw
+            bedrijfsdoelen te ondersteunen. We creëren intuïtieve
+            UX/UI-ontwerpen die de gebruikerservaring verbeteren, de
+            betrokkenheid vergroten en uw bedrijfsidentiteit weerspiegelen.
+          </p>
+        </div>
+      </div>
+      <ul
+        class="hidden lg:flex flex-col text-nowrap gap-0 font-atk text-lg w-1/4"
+      >
+        <li>User Experience (UX) Design</li>
+        <li>User Interface (UI) Design</li>
+        <li>Responsive Design</li>
+        <li>Mobile Design</li>
+        <li>Motion Design</li>
+        <li>Design System</li>
+      </ul>
+    </div>
+    <div
+      class="group flex flex-col lg:flex-row justify-center lg:justify-between gap-3 lg:gap-12 items-center px-6 lg:px-8 py-12 w-full border-4 border-black rounded-3xl hover:translate-y-1 transition-all duration-500 shadow-[0px_8px_0px_0px_rgba(28,28,28)] hover:shadow-[0px_0px_0px_0px_rgba(28,28,28)] max-w-screen-2xl h-full"
+    >
+      <div class="w-full max-w-16 lg:max-w-32">
+        <Dev />
+      </div>
+      <div class="text-center lg:text-justify w-full grow">
+        <h2>Development</h2>
+        <div
+          class="lg:grid grid-rows-[0fr] group-hover:grid-rows-[2fr] transition-all duration-500"
+        >
+          <p class="overflow-hidden text-lg lg:text-xl">
+            Onze ontwikkelingsservices zorgen ervoor dat uw website wordt
+            gebouwd met de nieuwste technologieën en beste praktijken. Van
+            landingspagina's tot complexe e-commerce-oplossingen bieden we
+            krachtige en flexibele ontwikkeling om aan uw zakelijke behoeften te
+            voldoen.
+          </p>
+        </div>
+      </div>
+      <ul
+        class="hidden lg:flex flex-col text-nowrap gap-0 font-atk text-lg w-1/4"
+      >
+        <li>Optimalisatie landingspagina's</li>
+        <li>E-Commerce ontwikkeling</li>
+        <li>API- en CMS-integraties</li>
+        <li>Webflow-ontwikkeling</li>
+        <li>Shopify ontwikkeling</li>
+        <li>Websiteonderhoudsdiensten</li>
+      </ul>
+    </div>
+
+    <div
+      class="group flex flex-col lg:flex-row justify-center lg:justify-between gap-3 lg:gap-12 items-center px-6 lg:px-8 py-12 w-full border-4 border-black rounded-3xl hover:translate-y-1 transition-all duration-500 shadow-[0px_8px_0px_0px_rgba(28,28,28)] hover:shadow-[0px_0px_0px_0px_rgba(28,28,28)] max-w-screen-2xl h-full"
+    >
+      <div class="w-full max-w-16 lg:max-w-32">
+        <Eye />
+      </div>
+      <div class="text-center lg:text-justify w-full grow">
+        <h2>Marketing</h2>
+        <div
+          class="lg:grid grid-rows-[0fr] group-hover:grid-rows-[2fr] transition-all duration-500"
+        >
+          <p class="overflow-hidden text-lg lg:text-xl">
+            Onze marketingdiensten vergroten de zichtbaarheid van uw merk en
+            leveren meetbare resultaten op. Door middel van strategische SEO
+            verbeteren we de zoekresultaten van uw website. We zijn
+            gespecialiseerd in zoekwoordonderzoek, on-page optimalisatie en
+            contentcreatie om ervoor te zorgen dat uw doelgroep u moeiteloos kan
+            vinden.
+          </p>
+        </div>
+      </div>
+      <ul
+        class="hidden lg:flex flex-col text-nowrap gap-0 font-atk text-lg w-1/4 grow"
+      >
+        <li>Technische SEO</li>
+        <li>On-page optimalisatie</li>
+        <li>SEO-audits</li>
+        <li>Webanalyse</li>
+        <li>Zoekwoordonderzoek</li>
+        <li>Website-structuur</li>
+      </ul>
+    </div>
+  </Section>
+
+  <Section
+    classes="bg-white text-black flex flex-col justify-center items-center relative "
+  >
+    <div class="flex flex-col justify-center items-center gap-3">
+      <img
+        class=""
+        src="https://res.cloudinary.com/dw9zgtd2v/image/upload/v1716791674/milo_fzmpmf.webp"
+        alt=""
+      />
+      <div class="text-center flex flex-col justify-center items-center">
+        <h3 class="text-[clamp(1.125rem,_0.95rem_+_0.875vw,_2rem)]">
+          Milenko Ilic
+        </h3>
+        <p class="md:text-xl">Eigenaar</p>
+        <Link
+          classes=" mt-4 underline md:text-xl "
+          url="mailto:Milenko@bigbaboons.studio"
+          target="_blank">Milenko@bigbaboons.studio</Link
+        >
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  li {
+    @apply text-[#3d3d3d];
+  }
+</style>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+</script>
