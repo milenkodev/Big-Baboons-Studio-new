@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-function init() {
+function  init() {
   const heroText = document.querySelectorAll(".hero-text");
   gsap.from(heroText, {
     yPercent: 100,
@@ -41,7 +41,7 @@ function init() {
       });
   });
 
-  const FooterTextUp = document.querySelectorAll(".FooterUp");
+  // const FooterTextUp = document.querySelectorAll(".FooterUp");
 
   const tlFooter = gsap.timeline({
     scrollTrigger: {
@@ -77,6 +77,8 @@ function init() {
       end: "bottom bottom",
       scrub: 0.1,
     },
+
+
     opacity: 0,
     display: "hidden",
     duration: 0.1,
@@ -107,6 +109,8 @@ function init() {
       // markers: true,
     },
   });
+
+
 
   explainTl
     .from(
@@ -163,14 +167,16 @@ function init() {
       },
       0
     );
-}
+};
 
 // Page transition
 const swup = new Swup({ plugins: [new SwupHeadPlugin({})] });
 
+init();
 // Set init() as callback for Swup hooks
-swup.hooks.on("page:view", () => {
+swup.hooks.on("content:replace", () => {
   init();
-
 });
-swup.hooks.on("content:replace", init());
+
+
+
