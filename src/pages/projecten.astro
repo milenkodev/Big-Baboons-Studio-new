@@ -7,7 +7,10 @@ import { Image } from "astro:assets";
 import BaseLayoutDutch from "../layout/BaseLayoutDutch.astro";
 ---
 
-<BaseLayoutDutch title="Projecten | Big Baboons Studio" description="Ontdek onze projecten bij Big Baboons Studio. Verken ons portfolio voor ons laatste werk, successen en samenwerkingen met klanten. Laten we bespreken hoe we uw project tot leven kunnen brengen!">
+<BaseLayoutDutch
+  title="Projecten | Big Baboons Studio"
+  description="Ontdek onze projecten bij Big Baboons Studio. Verken ons portfolio voor ons laatste werk, successen en samenwerkingen met klanten. Laten we bespreken hoe we uw project tot leven kunnen brengen!"
+>
   <Section
     classes="indexCards bg-white flex flex-col justify-center items-center "
   >
@@ -15,10 +18,10 @@ import BaseLayoutDutch from "../layout/BaseLayoutDutch.astro";
       <a href="/"><Logo /></a>
       <div class="flex items-center gap-8">
         <div class="hidden md:flex items-center gap-1">
-          <Link classes="font-black text-lg font-black underline text-accent" url="/en/work">EN</Link> / <Link
-            classes=" text-lg pointer-events-none"
-            url="">NL</Link
-          >
+          <Link
+            classes="font-black text-lg font-black underline text-accent"
+            url="/en/work">EN</Link
+          > / <Link classes=" text-lg pointer-events-none" url="">NL</Link>
         </div>
         <Link classes="cta" url="contact">Laten we praten!</Link>
       </div>
@@ -26,7 +29,9 @@ import BaseLayoutDutch from "../layout/BaseLayoutDutch.astro";
     <div class="grow flex flex-col items-center justify-center">
       <div class="overflow-clip"><h1 class="hero-text">Projecten</h1></div>
 
-      <div class="absolute bottom-0 right-4 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] max-w-16 ">
+      <div
+        class="absolute bottom-0 right-4 md:right-[clamp(1rem,_0.4rem_+_3vw,_4rem)] max-w-16"
+      >
         <PointingDown />
       </div>
     </div>
@@ -55,7 +60,7 @@ import BaseLayoutDutch from "../layout/BaseLayoutDutch.astro";
   </Section>
   <Section classes=" indexCards bg-white relative flex group">
     <div
-      class="grow flex flex-col items-center justify-center absolute inset-0 duration-300 z-10 group-hover:bg-black/50  bg-black/0"
+      class="grow flex flex-col items-center justify-center absolute inset-0 duration-300 z-10 group-hover:bg-black/50 bg-black/0"
     >
       <a
         href="work/gentlemens-barber-club"
@@ -97,5 +102,4 @@ import BaseLayoutDutch from "../layout/BaseLayoutDutch.astro";
       />
     </div>
   </Section>
-</BaseLayout>
-
+</BaseLayoutDutch>
