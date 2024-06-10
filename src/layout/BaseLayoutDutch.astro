@@ -3,7 +3,7 @@ import Logo from "../assets/images/Logo.astro";
 import FooterDutch from "../components/FooterDutch.astro";
 import NavDutch from "../components/NavDutch.astro";
 import "../style/Style.astro";
-const { title, description } = Astro.props;
+const { title, description, canonical } = Astro.props;
 ---
 
 <html lang="nl">
@@ -13,8 +13,11 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/x-icon" href="/favicon.svg"/>
+    <link rel="canonical" href={canonical}/>
+    <link rel="alternate" href="https://www.bigbaboons.studio/" hreflang="nl" />
+    <link rel="alternate" href="https://www.bigbaboons.studio/en" hreflang="en" />
     <meta name="description" content={description} />
-    <!-- <link
+    <link
       rel="preload"
       as="font"
       type="font/woff2"
@@ -34,7 +37,7 @@ const { title, description } = Astro.props;
       type="font/woff2"
       href="node_modules/@fontsource/@fontsource/prompt/900.css"
       crossorigin="anonymous"
-    /> -->
+    />
 
     <title>{ title }</title>
   </head>

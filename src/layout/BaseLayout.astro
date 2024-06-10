@@ -3,7 +3,7 @@ import Logo from "../assets/images/Logo.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import "../style/Style.astro";
-const { title, description } = Astro.props;
+const { title, description, canonical } = Astro.props;
 ---
 
 <html lang="en">
@@ -14,7 +14,8 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/x-icon" href="/favicon.svg"/>
     <meta name="description" content={description} />
-    <!-- <link
+    <link rel="canonical" href={canonical}/>
+    <link
       rel="preload"
       as="font"
       type="font/woff2"
@@ -34,7 +35,7 @@ const { title, description } = Astro.props;
       type="font/woff2"
       href="node_modules/@fontsource/@fontsource/prompt/900.css"
       crossorigin="anonymous"
-    /> -->
+    />
 
     <title>{ title }</title>
   </head>
