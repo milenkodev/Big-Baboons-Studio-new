@@ -12,17 +12,14 @@ const { title, description, canonical } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/x-icon" href="/favicon.svg"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical}/>
-    
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "mpp1vhpm8c");
-  </script>
+    <link rel="canonical" href={canonical} />
+
+    <script src="../script/clarity.js"></script>
+    <script src="../script/gtag.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENCP03GMLQ"
+    ></script>
     <link
       rel="preload"
       as="font"
@@ -45,18 +42,20 @@ const { title, description, canonical } = Astro.props;
       crossorigin="anonymous"
     />
 
-    <title>{ title }</title>
+    <title>{title}</title>
   </head>
   <body class="bg-black">
     <main id="swup" class="transition-main">
       <Nav />
       <slot />
       <div class="lastCard hidden"></div>
-      <Footer/>
+      <Footer />
     </main>
     <div class="overlay transition-overlay flex justify-center items-center">
       <div class="overflow-clip">
-        <Logo classes="fill-white min-w-[124px] md:min-w-[200px] logo-overlay transition-logo" />
+        <Logo
+          classes="fill-white min-w-[124px] md:min-w-[200px] logo-overlay transition-logo"
+        />
       </div>
     </div>
     <script>
