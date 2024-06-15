@@ -60,18 +60,9 @@ import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
       </video>
     </div>
   </Section>
-  <Section
-    classes="indexCards bg-white relative hidden lg:block flex "
-    sectionClass="hidden lg:block"
-  >
+  <Section classes="indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block">
-      <video
-        autoplay
-        loop
-        muted
-        playsinline
-        class="h-full w-full lg:object-cover rounded-3xl"
-      >
+      <video muted autoplay loop controls playsinline class="video-player h-full w-full object-cover rounded-3xl">
         <source
           src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-desktop.webm"
           type="video/webm"
@@ -141,6 +132,15 @@ import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
 </BaseLayoutDutch>
 
 <script>
-
+document.addEventListener('DOMContentLoaded', (event) => {
+  const video = document.querySelector('.video-player');
+  if (video) {
+    video.play().catch(() => {
+      // Try to play again in case of autoplay restrictions
+      video.muted = true;
+      video.play();
+    });
+  }
+});
   
 </script>
