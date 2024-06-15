@@ -132,15 +132,12 @@ import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
 </BaseLayoutDutch>
 
 <script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  const video = document.querySelector('.video-player');
-  if (video) {
-    video.play().catch(() => {
-      // Try to play again in case of autoplay restrictions
-      video.muted = true;
-      video.play();
-    });
-  }
-});
-  
+
+
+import Swup from "swup";
+import SwupHeadPlugin from "@swup/head-plugin";
+
+
+
+
 </script>

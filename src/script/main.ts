@@ -4,6 +4,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
+
+
 function  init() {
   const heroText = document.querySelectorAll(".hero-text");
   gsap.from(heroText, {
@@ -167,15 +173,23 @@ function  init() {
       0
     );
 };
+init();
 
+
+if (!isSafari()) {
 // Page transition
 const swup = new Swup({ plugins: [new SwupHeadPlugin({})] });
 
-init();
+
+
+  swup.hooks.on("content:replace", () => {
+    init();
+  });
+}
 // Set init() as callback for Swup hooks
-swup.hooks.on("content:replace", () => {
-  init();
-});
+
+
+
 
 
 
