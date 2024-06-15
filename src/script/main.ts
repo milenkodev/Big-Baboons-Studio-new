@@ -162,7 +162,6 @@ function  init() {
       toThePointText2,
       {
         xPercent: -200,
-
         ease: "power4",
       },
       0
@@ -177,6 +176,8 @@ init();
 swup.hooks.on("content:replace", () => {
   init();
 });
+
+
 
 
 
