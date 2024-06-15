@@ -46,8 +46,7 @@ import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
   </Hero>
   <Section classes="indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block">
-      <video muted autoplay loop class="video-player"
-        class="h-full w-full object-cover rounded-3xl"
+      <video muted autoplay loop playsinline class="video-player h-full w-full object-cover rounded-3xl">
       >
         <source
           src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-mobile.webp"
@@ -62,7 +61,7 @@ import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
   </Section>
   <Section classes="indexCards bg-white relative  flex">
     <div class="absolute inset-0 rounded-3xl block">
-      <video muted autoplay loop controls playsinline class="video-player h-full w-full object-cover rounded-3xl">
+      <video muted autoplay loop  playsinline class="video-player h-full w-full object-cover rounded-3xl">
         <source
           src="https://res.cloudinary.com/dw9zgtd2v/video/upload/f_auto:video,q_auto/v1/superdisco/superdisco-vid-desktop.webm"
           type="video/webm"
@@ -130,14 +129,3 @@ import BaseLayoutDutch from "../../layout/BaseLayoutDutch.astro";
     </div>
   </Section>
 </BaseLayoutDutch>
-
-<script>
-
-
-import Swup from "swup";
-import SwupHeadPlugin from "@swup/head-plugin";
-
-
-
-
-</script>
