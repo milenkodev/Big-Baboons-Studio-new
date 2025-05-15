@@ -79,7 +79,7 @@ function  init() {
   gsap.from(".footer", {
     scrollTrigger: {
       trigger: ".lastCard",
-      start: "start center",
+      start: "top center",
       end: "bottom bottom",
       scrub: 0.1,
       // markers: true,
@@ -91,13 +91,15 @@ function  init() {
 
   gsap.from(".footerLogo", {
     scrollTrigger: {
-      trigger: ".footer",
-      start: "top bottom",
+      trigger: ".lastCard",
+      start: "top top+=100",
       end: "bottom bottom",
       scrub: 1,
+      // markers: true,
     },
-    display: "none",
+  
     opacity: 0,
+
   });
 
   const explainTitle = document.querySelector(".explain-title");

@@ -4,16 +4,17 @@ import Section from "./Section.astro";
 import Logo from "../assets/images/Logo.astro"
 ---
 
-<Section classes="text-white flex flex-col justify-between fixed inset-0 pointer-events-none z-[-100] footer">
-  <div class="overflow-clip  w-fit mx-auto">
-  <a href="/" class=" w-fit overflow-clip pointer-events-auto footerLogo">
-    <Logo classes="fill-white "/>
-  </a>
-</div>
-  <div class="grow flex flex-col justify-center items-center  ">
+<Section classes="text-white flex flex-col justify-between fixed inset-0 pointer-events-none">
+  <div class="overflow-clip  w-fit mx-auto footerLogo">
+    <a href="/" class=" w-fit overflow-clip pointer-events-auto">
+      <Logo classes="fill-white "/>
+    </a>
+  </div>
+
+  <div class="grow flex flex-col justify-center items-center">
     <div class=" relative">
       <div class="overflow-clip">
-      <h1 class="FooterUp ">Zeg hallo!</h1>
+      <h1 class="FooterUp">Zeg hallo!</h1>
     </div>
       <p class=" alter-text font-marker text-white text-right absolute right-0 bg-accent rotate-6 px-1 rounded-sm text-[clamp(0.75rem,_0.7rem_+_0.25vw,_1rem)">
        Wij bijten niet, beloofd
