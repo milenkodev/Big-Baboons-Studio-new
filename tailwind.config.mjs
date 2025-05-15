@@ -49,9 +49,9 @@ export default {
         },
       },
       colors: {
-        white: "#F3F3F3",
-        black: "#1C1C1C",
-        accent: "#D31B30",
+        white: "#F1EEE1",
+        black: "#262626",
+        accent: "#FF323F",
       },
       fontFamily: {
         prompt: ["Prompt", "sans-serif"],

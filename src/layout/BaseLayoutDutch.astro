@@ -1,5 +1,5 @@
 ---
-import Logo from "../assets/images/Logo.astro";
+import Logo from "../assets/images/Logo_transition.astro";
 import FooterDutch from "../components/FooterDutch.astro";
 import NavDutch from "../components/NavDutch.astro";
 import "../style/Style.astro";
@@ -51,7 +51,7 @@ const { title, description, canonical } = Astro.props;
     <main id="swup" class="transition-main">
       <NavDutch />
       <slot />
-      <div class="lastCard hidden"></div>
+      <div class="lastCard hidden "></div>
       <FooterDutch/>
     </main>
     <div class="overlay transition-overlay flex justify-center items-center">

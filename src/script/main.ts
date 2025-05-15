@@ -82,12 +82,11 @@ function  init() {
       start: "start center",
       end: "bottom bottom",
       scrub: 0.1,
+      // markers: true,
     },
-
-
     opacity: 0,
     display: "hidden",
-    duration: 0.1,
+    duration: 0.2,
   });
 
   gsap.from(".footerLogo", {
@@ -95,7 +94,7 @@ function  init() {
       trigger: ".footer",
       start: "top bottom",
       end: "bottom bottom",
-      scrub: 0.1,
+      scrub: 1,
     },
     display: "none",
     opacity: 0,
