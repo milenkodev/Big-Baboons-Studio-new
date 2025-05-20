@@ -48,33 +48,22 @@ function  init() {
       });
   });
 
-  const tlFooter = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".lastCard",
-      start: "bottom center-=200",
-      end: "bottom bottom",
-      scrub: 1,
-    },
-  });
-  tlFooter
-    .from(
-      ".FooterUp",
-      {
-        yPercent: 100,
-        opacity:0,
-        duration: 1,
-        ease: "power1",
+
+  gsap.to(".footer-items",
+    {
+      scrollTrigger: {
+        trigger: ".lastCard",
+        start: "bottom center-=200",
+        end: "bottom bottom",
+        scrub: 1,
+        // markers: true,
       },
-      0
-    )
-    .from(
-      ".alter-text",
-      {
-        autoAlpha: 0,
-        rotateY: 90,
-      },
-      0
-    );
+      y: 0,
+      opacity:100,
+      duration: 1,
+      ease: "power1",
+    });
+
 
   gsap.from(".footer", {
     scrollTrigger: {
@@ -97,15 +86,12 @@ function  init() {
       scrub: 1,
       // markers: true,
     },
-  
     opacity: 0,
-
   });
 
   const explainTitle = document.querySelector(".explain-title");
   const explainText = document.querySelector(".explain-text");
-  const explainSection = document.querySelector(".explainSection");
-  // const explainBtn = document.querySelector(".explainBtn");
+  const explainSection = document.querySelector(".explain-section");
 
   const explainTl = gsap.timeline({
     scrollTrigger: {
@@ -125,7 +111,6 @@ function  init() {
       {
         yPercent: 100,
         transformOrigin: "center",
-        // duration: 1,
         ease: "power1",
       },
       0
