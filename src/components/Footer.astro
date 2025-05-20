@@ -13,23 +13,23 @@ import Logo from "../assets/images/Logo.astro";
   <div class="grow flex flex-col justify-center items-center">
     <div class="relative">
       <div class="overflow-clip">
-        <h1 class="FooterUp">Zeg hallo!</h1>
+        <h1 class="footer-items">Zeg hallo!</h1>
       </div>
 
-      <p class="alter-text font-marker text-white text-right absolute right-0 bg-accent rotate-6 px-1 rounded-sm text-[clamp(0.75rem,_0.7rem_+_0.25vw,_1rem)]">
+      <p class="footer-items font-marker text-white text-right absolute right-0 bg-accent rotate-6 px-1 rounded-sm text-[clamp(0.75rem,_0.7rem_+_0.25vw,_1rem)]">
         Wij bijten niet, beloofd!
       </p>
     </div>
     
     <div class="overflow-clip">
-      <Link classes="email mt-12 FooterUp" url="mailto:hello@bigbaboons.studio" target="_blank">
+      <Link classes="email mt-12 footer-items" url="mailto:hello@bigbaboons.studio" target="_blank">
         hello@bigbaboons.studio
       </Link>
     </div>
   </div>
 
-  <footer class="absolute bottom-3 left-0 w-full md:flex grid grid-cols-2 justify-between FooterUp">
-    <ul class="lg:flex grid lg:gap-3 grow flex-wrap px-3 text-base lg:text-lg">
+  <footer class="absolute bottom-3 left-0 w-full md:flex grid grid-cols-2 justify-between footer-items px-[clamp(1rem,_0.4rem_+_3vw,_4rem)] py-[clamp(1rem,_0.8rem_+_1vw,_2rem)]">
+    <ul class="lg:flex grid lg:gap-3 grow flex-wrap text-base lg:text-lg">
       <li>
         <Link url="en/" classes="default">Home</Link>
       </li>
@@ -47,7 +47,7 @@ import Logo from "../assets/images/Logo.astro";
       </li>
     </ul>
 
-    <ul class="lg:flex grid lg:gap-3 grow flex-wrap px-3 text-base lg:text-lg justify-end text-right">
+    <ul class="lg:flex grid lg:gap-3 grow flex-wrap text-base lg:text-lg justify-end text-right">
       <li>
         <div class="opacity-0">-</div>
       </li>
