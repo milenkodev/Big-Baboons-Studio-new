@@ -1,0 +1,12 @@
+.nav-link{
+    @apply text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt uppercase hover:underline;
+}
+
+/* Hamburger menu */
+.lines {
+    @apply bg-white h-1 duration-200 transition-all;
+  }
+
+  menu-button > li {
+    @apply w-full h-fit text-center text-5xl;
+  }

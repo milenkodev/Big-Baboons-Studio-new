@@ -14,8 +14,9 @@ function  init() {
   const heroText = document.querySelectorAll(".hero-text");
   gsap.from(heroText, {
     yPercent: 100,
+    opacity:0,
     stagger: 0.2,
-    duration: 1,
+    duration: 1.5,
     ease: "power1",
   });
 
@@ -47,8 +48,6 @@ function  init() {
       });
   });
 
-  // const FooterTextUp = document.querySelectorAll(".FooterUp");
-
   const tlFooter = gsap.timeline({
     scrollTrigger: {
       trigger: ".lastCard",
@@ -62,6 +61,7 @@ function  init() {
       ".FooterUp",
       {
         yPercent: 100,
+        opacity:0,
         duration: 1,
         ease: "power1",
       },
@@ -181,8 +181,6 @@ if (!isSafari()) {
 // Page transition
 const swup = new Swup({ plugins: [new SwupHeadPlugin({})] });
 
-
-
   swup.hooks.on("content:replace", () => {
     init();
   });
@@ -191,8 +189,18 @@ const swup = new Swup({ plugins: [new SwupHeadPlugin({})] });
 
 
 
+// Menu links animation 
+const menuBtn = document.querySelector(".menuCB");
+const menuLinks = document.querySelectorAll(".menulink");
 
-
-
-
-
+menuBtn?.addEventListener("change", () => {
+  if ((menuBtn).checked) {
+      gsap.from(menuLinks, {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.2,
+          scrub: true,
+          ease: "power1",
+      });
+  }
+});
