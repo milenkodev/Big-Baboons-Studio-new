@@ -4,18 +4,25 @@ export interface Props {
   classes?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
   text?: string;
+  currentPath?: string;
 }
 
-const { url, classes, target} = Astro.props;
+const { url, classes = "", target, currentPath = "" } = Astro.props;
+const isActive = url === currentPath;
+
+// Apply "active" class if current
+const activeClass = isActive ? "underline" : "";
+const notActiveClass = !isActive ? "opacity-90" : "";
+
 ---
 
-<a href={url} target={target} class:list={classes} class="group footer-text">
+<a href={url} target={target} class={`group footer-text ${classes} ${activeClass} ${notActiveClass}`.trim()}>
   <slot />
 </a>
 
 <style >
   .cta {
-    @apply relative  block px-6 py-4 border-2 h-fit text-lg border-black bg-accent rounded-lg font-atk font-bold text-white hover:translate-y-1 transition-all duration-200  shadow-[0px_4px_0px_0px_rgba(28,28,28)]  hover:shadow-[0px_0px_0px_0px_rgba(28,28,28)] ;
+    @apply relative  block px-6 py-4 border-2 h-fit text-lg border-black bg-accent rounded-lg font-atk font-bold text-white hover:translate-y-1 transition-all duration-200 shadow-[0px_4px_0px_0px_rgba(28,28,28)] hover:shadow-[0px_0px_0px_0px_rgba(28,28,28)] ;
   }
   .default {
     @apply relative block px-1 py-1 font-atk font-normal underline duration-500 pointer-events-auto ;
@@ -24,4 +31,8 @@ const { url, classes, target} = Astro.props;
     @apply relative inline-block  font-atk font-normal underline pointer-events-auto;
     font-size: clamp(1.5rem, 1.4rem + 0.5vw, 4rem);
   }
+
+  .nav-link{
+    @apply text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt uppercase hover:underline hover:opacity-100 duration-500 pointer-events-auto;
+}
 </style>

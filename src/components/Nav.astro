@@ -1,5 +1,6 @@
 ---
 import Link from "./Link.astro";
+const { pathname } = Astro.url; // Get current path
 ---
 
 <nav role="navigation" class="fixed bottom-0 left-0 flex justify-center w-full rounded-lg pointer-events-none group z-50" x-data="{ open: false }">
@@ -23,34 +24,34 @@ import Link from "./Link.astro";
   <ul class="flex gap-8 flex-col justify-center items-center w-full text-white fixed bottom-0 left-0 h-0 peer-has-[:checked]:h-full overflow-clip duration-700 rounded-xl pointer-events-auto bg-accent z-40">
     <li class="overflow-clip">
       <div class="menulink">
-        <Link url="/" classes="nav-link">Home</Link>
+        <Link url="/" classes="nav-link" currentPath={pathname}>Home</Link>
       </div>
     </li>
 
     <li class="overflow-clip">
       <div class="menulink">
-        <Link url="/over-ons" classes="nav-link">Over ons</Link>
+        <Link url="/over-ons" classes="nav-link" currentPath={pathname}>Over ons</Link>
       </div>
     </li>
 
     <li class="overflow-clip">
       <div class="menulink">
-        <Link url="/projecten" classes="nav-link">Projecten</Link>
+        <Link url="/projecten" classes="nav-link" currentPath={pathname}>Projecten</Link>
       </div>
     </li>
 
     <li class="overflow-clip">
       <div class="menulink">
-        <Link url="/contact" classes="nav-link">Contact</Link>
+        <Link url="/contact" classes="nav-link" currentPath={pathname}>Contact</Link>
       </div>
     </li>
 
-    <li>
-      <!-- <div class="flex md:hidden items-center gap-1 px-4 py-2 rounded-lg bg-black justify-center absolute bottom-4 right-4">
+    <!-- <li>
+      <div class="flex md:hidden items-center gap-1 px-4 py-2 rounded-lg bg-black justify-center absolute bottom-4 right-4">
         <Link classes="text-lg pointer-events-none" url="">EN</Link> /
 
         <Link classes="font-black text-lg underline" url="/">NL</Link>
-      </div> -->
-    </li>
+      </div>
+    </li> -->
   </ul>
 </nav>
