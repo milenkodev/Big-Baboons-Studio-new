@@ -12,9 +12,9 @@ function isSafari() {
 
 function  init() {
   const heroText = document.querySelectorAll(".hero-text");
-  gsap.from(heroText, {
-    yPercent: 100,
-    opacity:0,
+  gsap.to(heroText, {
+    y: 0,
+    opacity:100,
     stagger: 0.2,
     duration: 1.5,
     ease: "power1",
@@ -106,19 +106,19 @@ function  init() {
 
 
   explainTl
-    .from(
+    .to(
       explainTitle,
       {
-        yPercent: 100,
+        y: 0,
         transformOrigin: "center",
         ease: "power1",
       },
       0
     )
-    .from(
+    .to(
       explainText,
       {
-        yPercent: 100,
+        y: 0,
         transformOrigin: "center",
         // duration: 1.5,
         ease: "power1",
