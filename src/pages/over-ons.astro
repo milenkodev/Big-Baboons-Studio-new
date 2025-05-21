@@ -12,7 +12,9 @@ import BaseLayout from "../layout/BaseLayout.astro";
 <BaseLayout title="Over ons | Big Baboons Studio" description="Leer meer over Big Baboons Studio. Maak kennis met ons en ontdek hoe wij u kunnen helpen uw doelen te bereiken.">
   <Section classes=" bg-white flex flex-col justify-center items-center" id="over-ons">
     <div class="flex justify-between w-full items-center">
-      <a href="/"><Logo /></a>
+      <Link classes="" url="/">
+        <Logo />
+      </Link>
       <div class="flex items-center gap-8">
         <!-- <div class="hidden md:flex items-center gap-1">
           <Link classes="font-black text-lg font-black underline text-accent" url="/en/about">EN</Link> / <Link classes="text-lg pointer-events-none" url="">NL</Link>
