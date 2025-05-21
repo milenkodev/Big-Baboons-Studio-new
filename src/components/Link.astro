@@ -9,14 +9,11 @@ export interface Props {
 
 const { url, classes = "", target, currentPath = "" } = Astro.props;
 const isActive = url === currentPath;
-
-// Apply "active" class if current
 const activeClass = isActive ? "underline" : "";
-const notActiveClass = !isActive ? "opacity-90" : "";
 
 ---
 
-<a href={url} target={target} class={`group footer-text ${classes} ${activeClass} ${notActiveClass}`.trim()}>
+<a href={url} target={target} class={`group footer-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 rounded-xl ${classes} ${activeClass} `.trim()}>
   <slot />
 </a>
 
@@ -35,4 +32,9 @@ const notActiveClass = !isActive ? "opacity-90" : "";
   .nav-link{
     @apply text-[clamp(2rem,_0.85rem_+_5.75vw,_7.75rem)] font-prompt uppercase hover:underline hover:opacity-100 duration-500 pointer-events-auto;
 }
+
+.project-titles{
+    font-size: clamp(2rem, 0.85rem + 5.75vw, 7.75rem);
+    @apply text-center uppercase font-prompt underline absolute inset-0 rounded-3xl focus-visible:ring-0 focus-visible:ring-white flex justify-center items-center px-6 md:px-24 ;
+  }
 </style>
