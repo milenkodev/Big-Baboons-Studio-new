@@ -57,26 +57,17 @@ function init() {
   });
 
   //  Footer Section Animation 
-  gsap.from(".footer", {
+  gsap.to(".footer", {
     scrollTrigger: {
       trigger: ".lastCard",
       start: "top center",
       end: "bottom bottom",
-      scrub: 0.1,
+      scrub: 0.2,
     },
-    opacity: 0,
-    duration: 0.2,
+    opacity: 100,
+    duration: 0.1,
   });
 
-  gsap.from(".footerLogo", {
-    scrollTrigger: {
-      trigger: ".lastCard",
-      start: "top top+=100",
-      end: "bottom bottom",
-      scrub: 1,
-    },
-    opacity: 0,
-  });
 
   //  Explain Section Animation 
   const explainTitle = document.querySelector(".explain-title");
